@@ -40,16 +40,10 @@ export default function AuthModal({ onClose, onAuthSuccess }) {
     setLoading(false);
   };
 
-  const handleQuickDemo = (role) => {
-    if (role === 'admin') {
-      setEmail('admin@moviemate.com');
-      setPassword('admin123');
-      setActiveTab('admin');
-    } else {
-      setEmail('user@moviemate.com');
-      setPassword('user123');
-      setActiveTab('login');
-    }
+  const handleQuickDemoUser = () => {
+    setEmail('user@moviemate.com');
+    setPassword('user123');
+    setActiveTab('login');
   };
 
   return (
@@ -162,10 +156,10 @@ export default function AuthModal({ onClose, onAuthSuccess }) {
 
         <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
           <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#f8fafc', margin: 0 }}>
-            {activeTab === 'register' ? 'Create Account' : activeTab === 'admin' ? 'Admin Authentication' : 'Welcome Back'}
+            {activeTab === 'register' ? 'Create Account' : activeTab === 'admin' ? 'Admin Portal Access' : 'Welcome Back'}
           </h3>
           <p style={{ color: '#94a3b8', fontSize: '0.85rem', marginTop: '0.25rem' }}>
-            {activeTab === 'register' ? 'Join MovieMate v2 to save your ratings & watchlist.' : activeTab === 'admin' ? 'Access administrative controls & movie manager.' : 'Sign in to sync your personalized cinema collection.'}
+            {activeTab === 'register' ? 'Join MovieMate v2 to save your ratings & watchlist.' : activeTab === 'admin' ? 'Protected Administrator Portal. Valid credentials required.' : 'Sign in to sync your personalized cinema collection.'}
           </p>
         </div>
 
@@ -217,7 +211,7 @@ export default function AuthModal({ onClose, onAuthSuccess }) {
             <input
               type="email"
               required
-              placeholder="e.g. user@moviemate.com"
+              placeholder={activeTab === 'admin' ? "admin@moviemate.com" : "e.g. user@moviemate.com"}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               style={{
@@ -259,49 +253,32 @@ export default function AuthModal({ onClose, onAuthSuccess }) {
           <button
             type="submit"
             disabled={loading}
-            className={`btn ${activeTab === 'admin' ? 'btn-primary' : 'btn-primary'}`}
+            className="btn btn-primary"
             style={{ width: '100%', justifyContent: 'center', padding: '0.85rem', fontSize: '0.95rem' }}
           >
-            {loading ? 'Authenticating...' : activeTab === 'register' ? 'Create Account' : activeTab === 'admin' ? 'Login as Administrator' : 'Sign In'}
+            {loading ? 'Authenticating...' : activeTab === 'register' ? 'Create Account' : activeTab === 'admin' ? 'Login to Admin Panel' : 'Sign In'}
           </button>
         </form>
 
-        {/* Quick Demo Credentials */}
-        <div style={{ marginTop: '1.75rem', paddingTop: '1.25rem', borderTop: '1px solid rgba(255, 255, 255, 0.08)', textAlign: 'center' }}>
-          <p style={{ fontSize: '0.78rem', color: '#64748b', marginBottom: '0.6rem' }}>Instant 1-Click Demo Login:</p>
-          <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center' }}>
+        {activeTab !== 'admin' && (
+          <div style={{ marginTop: '1.75rem', paddingTop: '1.25rem', borderTop: '1px solid rgba(255, 255, 255, 0.08)', textAlign: 'center' }}>
             <button
-              onClick={() => handleQuickDemo('user')}
+              onClick={handleQuickDemoUser}
               style={{
                 background: 'rgba(99, 102, 241, 0.12)',
                 color: '#818cf8',
                 border: '1px solid rgba(99, 102, 241, 0.3)',
-                padding: '4px 10px',
+                padding: '4px 12px',
                 borderRadius: '8px',
                 fontSize: '0.78rem',
                 fontWeight: 600,
                 cursor: 'pointer'
               }}
             >
-              Demo User
-            </button>
-            <button
-              onClick={() => handleQuickDemo('admin')}
-              style={{
-                background: 'rgba(236, 72, 153, 0.12)',
-                color: '#f472b6',
-                border: '1px solid rgba(236, 72, 153, 0.3)',
-                padding: '4px 10px',
-                borderRadius: '8px',
-                fontSize: '0.78rem',
-                fontWeight: 600,
-                cursor: 'pointer'
-              }}
-            >
-              Demo Admin
+              Fill Demo User Credentials
             </button>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
