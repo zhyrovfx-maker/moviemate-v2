@@ -12,11 +12,13 @@ import NotificationToast from './components/NotificationToast';
 import { tmdbApi } from './services/tmdbApi';
 import { storage } from './services/storage';
 import { apiClient } from './services/apiClient';
+import { MOCK_MOVIES } from './data/mockMovies';
 
 export default function App() {
   const [currentView, setCurrentView] = useState('discover'); // 'discover' | 'watchlist' | 'recommendations' | 'analytics' | 'admin'
-  const [movies, setMovies] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // Initialize with instant offline catalog so mobile users ALWAYS see movies instantly
+  const [movies, setMovies] = useState(() => MOCK_MOVIES.map(tmdbApi.formatMovie));
+  const [loading, setLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedGenre, setSelectedGenre] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
@@ -38,31 +40,29 @@ export default function App() {
     }, 3500);
   };
 
-  // Fetch Movies (Server TMDB proxy + local cache)
+  // Fetch Live TMDB Movies & Merge
   useEffect(() => {
     let active = true;
     async function fetchMovies() {
-      setLoading(true);
-      let results = [];
-      if (searchQuery.trim()) {
-        results = await tmdbApi.searchMovies(searchQuery);
-      } else {
-        results = await tmdbApi.getTrending();
-      }
-      if (active) {
-        setMovies(results);
-        setLoading(false);
+      try {
+        let results = [];
+        if (searchQuery.trim()) {
+          results = await tmdbApi.searchMovies(searchQuery);
+        } else {
+          results = await tmdbApi.getTrending();
+        }
+        if (active && results && results.length > 0) {
+          setMovies(results);
+        }
+      } catch (err) {
+        console.warn('Live fetch error:', err);
+      } finally {
+        if (active) setLoading(false);
       }
     }
 
-    const timer = setTimeout(() => {
-      fetchMovies();
-    }, 250);
-
-    return () => {
-      active = false;
-      clearTimeout(timer);
-    };
+    fetchMovies();
+    return () => { active = false; };
   }, [searchQuery]);
 
   // Admin movie addition handler
@@ -82,15 +82,9 @@ export default function App() {
     return movies.find(m => m.featured) || movies[0] || null;
   }, [movies]);
 
-  // Filter & Sort Movies for Grid
-  const processedMovies = useMemo(() => {
+  // Sort Movies for Grid
+  const sortedMovies = useMemo(() => {
     let list = [...movies];
-
-    if (selectedGenre !== 'all') {
-      list = list.filter(m => 
-        m.genres && m.genres.some(g => g.toLowerCase().includes(selectedGenre.toLowerCase()))
-      );
-    }
 
     if (sortBy === 'rating') {
       list.sort((a, b) => b.vote_average - a.vote_average);
@@ -103,7 +97,7 @@ export default function App() {
     }
 
     return list;
-  }, [movies, selectedGenre, sortBy]);
+  }, [movies, sortBy]);
 
   // Toggle Watchlist Handler
   const handleToggleWatchlist = (movie, targetStatus = 'want') => {
@@ -124,7 +118,7 @@ export default function App() {
     setRatings(updated);
     const movieObj = movies.find(m => m.id === movieId);
     const movieTitle = movieObj ? movieObj.title : 'Movie';
-    triggerToast('rating', 'Rating Saved', `You rated "${movieTitle}" ${rating}/10 stars.`);
+    triggerToast('rating', 'Rating Saved', `You rated "${movieTitle}" ${rating}/5 stars.`);
   };
 
   // Add User Review Handler
@@ -138,13 +132,27 @@ export default function App() {
   const handleLogout = async () => {
     await apiClient.logout();
     setUser(null);
-    setCurrentView('discover');
-    triggerToast('auth', 'Signed Out', 'You have been logged out.');
+    if (currentView === 'admin') setCurrentView('discover');
+    triggerToast('auth', 'Logged Out', 'You have been signed out.');
   };
 
   return (
     <div className="app-container">
-      {/* Top Navbar */}
+      {/* Toast Notification */}
+      <NotificationToast toast={toast} onClose={() => setToast(null)} />
+
+      {/* Auth Modal */}
+      {showAuthModal && (
+        <AuthModal
+          onClose={() => setShowAuthModal(false)}
+          onAuthSuccess={(authenticatedUser) => {
+            setUser(authenticatedUser);
+            triggerToast('auth', 'Welcome!', `Signed in as ${authenticatedUser.name}`);
+          }}
+        />
+      )}
+
+      {/* Global Glassmorphic Navbar */}
       <Navbar
         currentView={currentView}
         setCurrentView={setCurrentView}
@@ -160,19 +168,19 @@ export default function App() {
       <main className="main-content">
         {currentView === 'discover' && (
           <>
-            {/* Hero Spotlight Banner */}
-            {!searchQuery && (
+            {/* Hero Banner for Featured Film */}
+            {!searchQuery && featuredMovie && (
               <HeroBanner
                 movie={featuredMovie}
                 onSelectMovie={setSelectedMovie}
                 onToggleWatchlist={handleToggleWatchlist}
-                inWatchlist={featuredMovie ? watchlist.some(w => w.id === featuredMovie.id) : false}
+                inWatchlist={watchlist.some(item => item.id === featuredMovie.id)}
               />
             )}
 
-            {/* Discover Movie Grid */}
+            {/* Movie Catalog Grid */}
             <MovieGrid
-              movies={processedMovies}
+              movies={sortedMovies}
               selectedGenre={selectedGenre}
               setSelectedGenre={setSelectedGenre}
               sortBy={sortBy}
@@ -190,7 +198,6 @@ export default function App() {
             watchlist={watchlist}
             onToggleWatchlist={handleToggleWatchlist}
             onSelectMovie={setSelectedMovie}
-            onRefreshWatchlist={() => setWatchlist(storage.getWatchlist())}
           />
         )}
 
@@ -218,27 +225,9 @@ export default function App() {
             movies={movies}
             onAddMovie={handleAddMovieToCatalog}
             onDeleteMovie={handleDeleteMovieFromCatalog}
-            user={user}
           />
         )}
       </main>
-
-      {/* Footer */}
-      <footer style={{
-        textAlign: 'center',
-        padding: '2.5rem 1.5rem',
-        borderTop: '1px solid rgba(255, 255, 255, 0.08)',
-        color: '#64748b',
-        fontSize: '0.85rem',
-        marginTop: '3rem'
-      }}>
-        <p style={{ margin: 0, fontWeight: 500 }}>
-          MovieMate v2 — Open Source Cinema Platform & Admin Manager
-        </p>
-        <p style={{ margin: '0.35rem 0 0 0', fontSize: '0.78rem', color: '#475569' }}>
-          Server-side TMDB Integration • PHP API & MySQL Ready • Role-based Auth
-        </p>
-      </footer>
 
       {/* Movie Details Modal */}
       {selectedMovie && (
@@ -246,7 +235,7 @@ export default function App() {
           movie={selectedMovie}
           onClose={() => setSelectedMovie(null)}
           onToggleWatchlist={handleToggleWatchlist}
-          inWatchlist={watchlist.some(w => w.id === selectedMovie.id)}
+          inWatchlist={watchlist.some(item => item.id === selectedMovie.id)}
           userRating={ratings[selectedMovie.id]?.rating}
           onSetRating={handleSetRating}
           userReviews={reviews}
@@ -254,25 +243,6 @@ export default function App() {
           onSelectMovie={setSelectedMovie}
         />
       )}
-
-      {/* Auth Modal (Login / Register / Admin) */}
-      {showAuthModal && (
-        <AuthModal
-          onClose={() => setShowAuthModal(false)}
-          onAuthSuccess={(authUser) => {
-            setUser(authUser);
-            if (authUser.role === 'admin') {
-              setCurrentView('admin');
-              triggerToast('auth', 'Welcome Administrator', `Logged in as ${authUser.name}`);
-            } else {
-              triggerToast('auth', 'Welcome Back', `Logged in as ${authUser.name}`);
-            }
-          }}
-        />
-      )}
-
-      {/* Toast Notification */}
-      <NotificationToast toast={toast} onClose={() => setToast(null)} />
     </div>
   );
 }
