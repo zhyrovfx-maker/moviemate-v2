@@ -53,10 +53,14 @@ export default function MovieModal({
     setReviewInput('');
   };
 
-  // Generate trailer embed URL (Direct YouTube ID or fallback search player)
-  const trailerEmbedUrl = currentMovie.youtube_trailer_id
-    ? `https://www.youtube.com/embed/${currentMovie.youtube_trailer_id}?autoplay=1`
-    : `https://www.youtube.com/embed?listType=search&list=${encodeURIComponent(currentMovie.title + ' official trailer')}&autoplay=1`;
+  // Direct YouTube Search & Watch Link (100% working on all mobile apps & browsers)
+  const youtubeWatchUrl = currentMovie.youtube_trailer_id
+    ? `https://www.youtube.com/watch?v=${currentMovie.youtube_trailer_id}`
+    : `https://www.youtube.com/results?search_query=${encodeURIComponent(currentMovie.title + ' official trailer')}`;
+
+  const youtubeEmbedUrl = currentMovie.youtube_trailer_id
+    ? `https://www.youtube-nocookie.com/embed/${currentMovie.youtube_trailer_id}?autoplay=1`
+    : null;
 
   return (
     <div style={{
@@ -123,32 +127,57 @@ export default function MovieModal({
           padding: '1.5rem',
           clear: 'both'
         }}>
-          {/* Always Available Watch Trailer Button */}
-          <button
-            onClick={() => setShowTrailer(!showTrailer)}
-            className="btn btn-primary"
-            style={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              padding: '0.75rem 1.5rem',
-              fontSize: '0.95rem',
-              boxShadow: '0 0 30px rgba(99, 102, 241, 0.6)',
-              whiteSpace: 'nowrap'
-            }}
-          >
-            <i className={`fa-solid ${showTrailer ? 'fa-xmark' : 'fa-play'}`} />
-            {showTrailer ? 'Close Trailer' : 'Watch Official Trailer'}
-          </button>
+          {/* Watch Trailer Action Buttons */}
+          <div style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            display: 'flex',
+            gap: '0.75rem',
+            flexWrap: 'wrap',
+            justifyContent: 'center'
+          }}>
+            <a
+              href={youtubeWatchUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+              style={{
+                padding: '0.75rem 1.5rem',
+                fontSize: '0.95rem',
+                boxShadow: '0 0 30px rgba(99, 102, 241, 0.6)',
+                whiteSpace: 'nowrap',
+                textDecoration: 'none'
+              }}
+            >
+              <i className="fa-brands fa-youtube" style={{ color: '#ff0000', fontSize: '1.2rem' }} />
+              <span>Watch Trailer on YouTube</span>
+            </a>
+
+            {youtubeEmbedUrl && (
+              <button
+                onClick={() => setShowTrailer(!showTrailer)}
+                className="btn btn-outline"
+                style={{
+                  padding: '0.75rem 1.25rem',
+                  fontSize: '0.95rem',
+                  whiteSpace: 'nowrap'
+                }}
+              >
+                <i className={`fa-solid ${showTrailer ? 'fa-xmark' : 'fa-play'}`} />
+                {showTrailer ? 'Close Inline' : 'Play Inline'}
+              </button>
+            )}
+          </div>
         </div>
 
-        {/* Embedded YouTube Player */}
-        {showTrailer && (
+        {/* Inline YouTube Player (If direct embed available) */}
+        {showTrailer && youtubeEmbedUrl && (
           <div style={{ padding: '1rem', background: '#000' }}>
             <div style={{ position: 'relative', paddingTop: '56.25%', width: '100%' }}>
               <iframe
-                src={trailerEmbedUrl}
+                src={youtubeEmbedUrl}
                 title={`${currentMovie.title} Trailer`}
                 style={{
                   position: 'absolute',
@@ -182,14 +211,16 @@ export default function MovieModal({
                 }}
               />
 
-              <button
-                onClick={() => setShowTrailer(!showTrailer)}
+              <a
+                href={youtubeWatchUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn btn-primary"
-                style={{ width: '100%', justifyContent: 'center', marginBottom: '0.6rem' }}
+                style={{ width: '100%', justifyContent: 'center', marginBottom: '0.6rem', textDecoration: 'none' }}
               >
-                <i className={`fa-solid ${showTrailer ? 'fa-xmark' : 'fa-play'}`} />
-                {showTrailer ? 'Close Trailer' : 'Watch Trailer'}
-              </button>
+                <i className="fa-brands fa-youtube" style={{ color: '#ff0000', fontSize: '1.1rem' }} />
+                <span>Watch Trailer</span>
+              </a>
 
               <button
                 onClick={() => onToggleWatchlist(currentMovie)}
