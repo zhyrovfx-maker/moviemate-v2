@@ -55,7 +55,7 @@ export default function Navbar({
               transform: 'translateY(-50%)',
               background: 'none',
               border: 'none',
-              color: '#818cf8',
+              color: '#e50914',
               cursor: 'pointer',
               fontSize: '0.95rem',
               padding: '4px',
@@ -141,9 +141,9 @@ export default function Navbar({
               className={`nav-link ${currentView === 'admin' ? 'active' : ''}`}
               onClick={() => setCurrentView('admin')}
               style={{
-                background: currentView === 'admin' ? 'linear-gradient(135deg, #ec4899, #8b5cf6)' : 'rgba(236, 72, 153, 0.15)',
-                color: currentView === 'admin' ? '#fff' : '#f472b6',
-                border: '1px solid rgba(236, 72, 153, 0.4)'
+                background: currentView === 'admin' ? 'linear-gradient(135deg, #e50914, #991b1b)' : 'rgba(229, 9, 20, 0.15)',
+                color: currentView === 'admin' ? '#fff' : '#f87171',
+                border: '1px solid rgba(229, 9, 20, 0.4)'
               }}
             >
               <i className="fa-solid fa-user-shield" />
@@ -155,13 +155,13 @@ export default function Navbar({
           {user ? (
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginLeft: '0.5rem' }}>
               <div style={{
-                background: 'rgba(99, 102, 241, 0.15)',
-                border: '1px solid rgba(99, 102, 241, 0.3)',
+                background: 'rgba(229, 9, 20, 0.15)',
+                border: '1px solid rgba(229, 9, 20, 0.3)',
                 padding: '0.4rem 0.85rem',
                 borderRadius: '20px',
                 fontSize: '0.82rem',
                 fontWeight: 700,
-                color: '#818cf8',
+                color: '#f87171',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '6px'

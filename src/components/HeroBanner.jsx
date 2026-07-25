@@ -9,7 +9,7 @@ export default function HeroBanner({ movie, onSelectMovie, onToggleWatchlist, in
     <section 
       className="hero-banner"
       style={{
-        backgroundImage: `linear-gradient(to top, rgba(9, 13, 22, 1) 0%, rgba(9, 13, 22, 0.4) 50%, rgba(9, 13, 22, 0.8) 100%), url("${movie.backdrop_path}")`,
+        backgroundImage: `linear-gradient(to top, rgba(7, 7, 10, 1) 0%, rgba(7, 7, 10, 0.4) 50%, rgba(30, 8, 10, 0.75) 100%), url("${movie.backdrop_path}")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         borderRadius: '24px',
@@ -26,14 +26,15 @@ export default function HeroBanner({ movie, onSelectMovie, onToggleWatchlist, in
       <div style={{ maxWidth: '750px', zIndex: 2 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
           <span style={{
-            background: 'linear-gradient(135deg, #6366f1, #8b5cf6)',
+            background: 'linear-gradient(135deg, #e50914, #991b1b)',
             color: '#fff',
             fontSize: '0.75rem',
             fontWeight: 700,
             padding: '4px 12px',
             borderRadius: '20px',
             letterSpacing: '0.5px',
-            textTransform: 'uppercase'
+            textTransform: 'uppercase',
+            boxShadow: '0 0 15px rgba(229, 9, 20, 0.5)'
           }}>
             Featured Cinema
           </span>

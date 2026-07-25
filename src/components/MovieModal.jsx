@@ -216,9 +216,9 @@ export default function MovieModal({
               <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '1.25rem' }}>
                 {currentMovie.genres?.map((g, idx) => (
                   <span key={idx} style={{
-                    background: 'rgba(99, 102, 241, 0.15)',
-                    border: '1px solid rgba(99, 102, 241, 0.3)',
-                    color: '#818cf8',
+                    background: 'rgba(229, 9, 20, 0.15)',
+                    border: '1px solid rgba(229, 9, 20, 0.3)',
+                    color: '#f87171',
                     padding: '3px 10px',
                     borderRadius: '12px',
                     fontSize: '0.78rem',
@@ -274,7 +274,7 @@ export default function MovieModal({
                 background: 'rgba(18, 24, 38, 0.9)',
                 padding: '1rem 1.25rem',
                 borderRadius: '16px',
-                border: '1px solid rgba(99, 102, 241, 0.2)',
+                border: '1px solid rgba(229, 9, 20, 0.2)',
                 marginBottom: '1.5rem'
               }}>
                 <h4 style={{ fontSize: '0.9rem', color: '#f8fafc', fontWeight: 700, marginBottom: '0.4rem' }}>
@@ -345,7 +345,7 @@ export default function MovieModal({
                     marginBottom: '0.6rem'
                   }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.3rem' }}>
-                      <strong style={{ fontSize: '0.82rem', color: '#6366f1' }}>{rev.author}</strong>
+                      <strong style={{ fontSize: '0.82rem', color: '#f87171' }}>{rev.author}</strong>
                       <span style={{ fontSize: '0.72rem', color: '#64748b' }}>{rev.date}</span>
                     </div>
                     <p style={{ fontSize: '0.85rem', color: '#cbd5e1', margin: 0 }}>{rev.content}</p>
