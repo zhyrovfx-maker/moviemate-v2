@@ -28,13 +28,20 @@ export default function MovieGrid({
     return true;
   };
 
-  // Flexible Genre Matcher
-  const isGenreMatch = (movieGenres, targetGenre) => {
+  // Flexible Genre Matcher with TV Series Support
+  const isGenreMatch = (movie, targetGenre) => {
     if (targetGenre === 'all') return true;
-    if (!movieGenres || movieGenres.length === 0) return false;
+    if (!movie) return false;
 
     const target = targetGenre.toLowerCase();
-    return movieGenres.some(g => {
+    
+    if (target === 'series') {
+      return movie.is_series || (movie.genres && movie.genres.some(g => g.toLowerCase().includes('series') || g.toLowerCase().includes('tv')));
+    }
+
+    if (!movie.genres || movie.genres.length === 0) return false;
+
+    return movie.genres.some(g => {
       const name = g.toLowerCase();
       if (target === 'sci-fi') {
         return name.includes('sci-fi') || name.includes('science fiction') || name.includes('scifi');
@@ -55,13 +62,13 @@ export default function MovieGrid({
     });
   };
 
-  const filteredMovies = movies.filter(m => isSafeContent(m) && isGenreMatch(m.genres, selectedGenre));
+  const filteredMovies = movies.filter(m => isSafeContent(m) && isGenreMatch(m, selectedGenre));
 
   return (
     <section style={{ marginTop: '1.5rem' }}>
       {/* Header Controls */}
       <div className="section-controls-header">
-        {/* Genre Pill Filter Tabs */}
+        {/* Genre & Series Pill Filter Tabs */}
         <div className="genre-pill-container">
           {GENRES.map(g => (
             <button
@@ -100,7 +107,7 @@ export default function MovieGrid({
         </div>
       </div>
 
-      {/* Movies Grid */}
+      {/* Movies & TV Series Grid */}
       {filteredMovies.length > 0 ? (
         <div className="movie-grid">
           {filteredMovies.map(movie => (
@@ -125,20 +132,20 @@ export default function MovieGrid({
           margin: '2rem 0'
         }}>
           <div style={{ fontSize: '3rem', color: '#6366f1', marginBottom: '1rem' }}>
-            <i className="fa-solid fa-film" />
+            <i className="fa-solid fa-tv" />
           </div>
           <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: '#f8fafc', marginBottom: '0.5rem' }}>
-            No Movies Found in this Category
+            No Titles Found in this Category
           </h3>
           <p style={{ color: '#94a3b8', fontSize: '0.9rem', marginBottom: '1.25rem' }}>
-            Try selecting "All Genres" or searching for a different movie title.
+            Try selecting "All" or searching for a different title.
           </p>
           <button
             onClick={() => setSelectedGenre('all')}
             className="btn btn-primary"
             style={{ padding: '0.6rem 1.25rem', fontSize: '0.85rem' }}
           >
-            Show All Movies
+            Show All Titles
           </button>
         </div>
       )}

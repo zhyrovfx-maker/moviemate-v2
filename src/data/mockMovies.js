@@ -1,5 +1,6 @@
 export const GENRES = [
-  { id: 'all', name: 'All Genres', icon: 'fa-film' },
+  { id: 'all', name: 'All', icon: 'fa-film' },
+  { id: 'series', name: 'TV Series', icon: 'fa-tv' },
   { id: 'action', name: 'Action', icon: 'fa-burst' },
   { id: 'sci-fi', name: 'Sci-Fi', icon: 'fa-robot' },
   { id: 'drama', name: 'Drama', icon: 'fa-masks-theater' },
@@ -11,6 +12,390 @@ export const GENRES = [
 ];
 
 export const MOCK_MOVIES = [
+  {
+    "id": 901396,
+    "title": "Breaking Bad",
+    "original_title": "Breaking Bad",
+    "tagline": "Popular TV Series",
+    "overview": "Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/tsRy63Mu5cu8etL1X7ZLyf7UP1M.jpg",
+    "vote_average": 8.9,
+    "vote_count": 18171,
+    "release_date": "2008-01-20",
+    "year": "2008",
+    "runtime": 45,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Actor",
+      "Supporting Actor"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 966732,
+    "title": "Stranger Things",
+    "original_title": "Stranger Things",
+    "tagline": "Popular TV Series",
+    "overview": "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/uOOtwVbSr4QDjAGIifLDwpb2Pdl.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/56v2KjBlU4XaOv9rVYEQypROD7P.jpg",
+    "vote_average": 8.6,
+    "vote_count": 21514,
+    "release_date": "2016-07-15",
+    "year": "2016",
+    "runtime": 45,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Actor",
+      "Supporting Actor"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 1000088,
+    "title": "The Last of Us",
+    "original_title": "The Last of Us",
+    "tagline": "Popular TV Series",
+    "overview": "Twenty years after modern civilization has been destroyed, Joel, a hardened survivor, is hired to smuggle Ellie, a 14-year-old girl, out of an oppressive quarantine zone. What starts as a small job soon becomes a brutal, heartbreaking journey, as they both must traverse the United States and depend on each other for survival.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/dmo6TYuuJgaYinXBPjrgG9mB5od.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/acevLdSl5I2MK5RYAm7gwAndt1w.jpg",
+    "vote_average": 8.4,
+    "vote_count": 7168,
+    "release_date": "2023-01-15",
+    "year": "2023",
+    "runtime": 45,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Actor",
+      "Supporting Actor"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 982856,
+    "title": "The Mandalorian",
+    "original_title": "The Mandalorian",
+    "tagline": "Popular TV Series",
+    "overview": "After the fall of the Galactic Empire, lawlessness has spread throughout the galaxy. A lone gunfighter makes his way through the outer reaches, earning his keep as a bounty hunter.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/9zcbqSxdsRMZWHYtyCd1nXPr2xq.jpg",
+    "vote_average": 8.4,
+    "vote_count": 11076,
+    "release_date": "2019-11-12",
+    "year": "2019",
+    "runtime": 45,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Actor",
+      "Supporting Actor"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 984958,
+    "title": "Loki",
+    "original_title": "Loki",
+    "tagline": "Popular TV Series",
+    "overview": "After stealing the Tesseract during the events of “Avengers: Endgame,” an alternate version of Loki is brought to the mysterious Time Variance Authority, a bureaucratic organization that exists outside of time and space and monitors the timeline. They give Loki a choice: face being erased from existence due to being a “time variant” or help fix the timeline and stop a greater threat.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/rX1wQMTKFqF0gvZyS0DDQqgnQPB.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/q3jHCb4dMfYF6ojikKuHd6LscxC.jpg",
+    "vote_average": 8.2,
+    "vote_count": 12515,
+    "release_date": "2021-06-09",
+    "year": "2021",
+    "runtime": 45,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Actor",
+      "Supporting Actor"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 919885,
+    "title": "Sherlock",
+    "original_title": "Sherlock",
+    "tagline": "Popular TV Series",
+    "overview": "A modern update finds the famous sleuth and his doctor partner solving crime in 21st century London.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/7WTsnHkbA0FaG6R9twfFde0I9hl.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/8rvLEmdI4gLrMO1rLqbNdnNcPFE.jpg",
+    "vote_average": 8.5,
+    "vote_count": 6535,
+    "release_date": "2010-07-25",
+    "year": "2010",
+    "runtime": 45,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Actor",
+      "Supporting Actor"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 982452,
+    "title": "Avatar: The Last Airbender",
+    "original_title": "Avatar: The Last Airbender",
+    "tagline": "Popular TV Series",
+    "overview": "A young boy known as the Avatar must master the four elemental powers to save a world at war — and fight a ruthless enemy bent on stopping him.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/lzZpWEaqzP0qVA5nkCc5ASbNcSy.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/aVvRQJ2Ckhlym4uh0YGc166CUoP.jpg",
+    "vote_average": 7.8,
+    "vote_count": 1278,
+    "release_date": "2024-02-22",
+    "year": "2024",
+    "runtime": 45,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Actor",
+      "Supporting Actor"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 994605,
+    "title": "Arcane",
+    "original_title": "Arcane",
+    "tagline": "Popular TV Series",
+    "overview": "Amid the stark discord of twin cities Piltover and Zaun, two sisters fight on rival sides of a war between magic technologies and clashing convictions.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/abf8tHznhSvl9BAElD2cQeRr7do.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/q8eejQcg1bAqImEV8jh8RtBD4uH.jpg",
+    "vote_average": 8.8,
+    "vote_count": 6043,
+    "release_date": "2021-11-06",
+    "year": "2021",
+    "runtime": 45,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Actor",
+      "Supporting Actor"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 995396,
+    "title": "Severance",
+    "original_title": "Severance",
+    "tagline": "Popular TV Series",
+    "overview": "Mark leads a team of office workers whose memories have been surgically divided between their work and personal lives. When a mysterious colleague appears outside of work, it begins a journey to discover the truth about their jobs.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/pPHpeI2X1qEd1CS1SeyrdhZ4qnT.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/ixgFmf1X59PUZam2qbAfskx2gQr.jpg",
+    "vote_average": 8.4,
+    "vote_count": 2780,
+    "release_date": "2022-02-17",
+    "year": "2022",
+    "runtime": 45,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Actor",
+      "Supporting Actor"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 976331,
+    "title": "Succession",
+    "original_title": "Succession",
+    "tagline": "Popular TV Series",
+    "overview": "Follow the lives of the Roy family as they contemplate their future once their aging father begins to step back from the media and entertainment conglomerate they control.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/z0XiwdrCQ9yVIr4O0pxzaAYRxdW.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/bcdUYUFk8GdpZJPiSAas9UeocLH.jpg",
+    "vote_average": 8.3,
+    "vote_count": 1697,
+    "release_date": "2018-06-03",
+    "year": "2018",
+    "runtime": 45,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Actor",
+      "Supporting Actor"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 1019051,
+    "title": "Wednesday",
+    "original_title": "Wednesday",
+    "tagline": "Popular TV Series",
+    "overview": "Smart, sarcastic and a little dead inside, Wednesday Addams investigates twisted mysteries while making new friends — and foes — at Nevermore Academy.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/36xXlhEpQqVVPuiZhfoQuaY4OlA.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/iHSwvRVsRyxpX7FE7GbviaDvgGZ.jpg",
+    "vote_average": 8.3,
+    "vote_count": 10669,
+    "release_date": "2022-11-23",
+    "year": "2022",
+    "runtime": 45,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Actor",
+      "Supporting Actor"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 902316,
+    "title": "The Office",
+    "original_title": "The Office",
+    "tagline": "Popular TV Series",
+    "overview": "The everyday lives of office employees in the Scranton, Pennsylvania branch of the fictional Dunder Mifflin Paper Company.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/7DJKHzAi83BmQrWLrYYOqcoKfhR.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/mLyW3UTgi2lsMdtueYODcfAB9Ku.jpg",
+    "vote_average": 8.6,
+    "vote_count": 5317,
+    "release_date": "2005-03-24",
+    "year": "2005",
+    "runtime": 45,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Actor",
+      "Supporting Actor"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
   {
     "id": 1451344,
     "title": "Husbands in Action",
