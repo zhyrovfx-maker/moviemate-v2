@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import Navbar from './components/Navbar';
 import HeroBanner from './components/HeroBanner';
 import MovieGrid from './components/MovieGrid';
@@ -16,9 +16,8 @@ import { MOCK_MOVIES } from './data/mockMovies';
 
 export default function App() {
   const [currentView, setCurrentView] = useState('discover'); // 'discover' | 'watchlist' | 'recommendations' | 'analytics' | 'admin'
-  // Initialize with instant offline catalog so mobile users ALWAYS see movies instantly
+  // Full 204+ movie catalog
   const [movies, setMovies] = useState(() => MOCK_MOVIES.map(tmdbApi.formatMovie));
-  const [loading, setLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedGenre, setSelectedGenre] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
@@ -40,31 +39,6 @@ export default function App() {
     }, 3500);
   };
 
-  // Fetch Live TMDB Movies & Merge
-  useEffect(() => {
-    let active = true;
-    async function fetchMovies() {
-      try {
-        let results = [];
-        if (searchQuery.trim()) {
-          results = await tmdbApi.searchMovies(searchQuery);
-        } else {
-          results = await tmdbApi.getTrending();
-        }
-        if (active && results && results.length > 0) {
-          setMovies(results);
-        }
-      } catch (err) {
-        console.warn('Live fetch error:', err);
-      } finally {
-        if (active) setLoading(false);
-      }
-    }
-
-    fetchMovies();
-    return () => { active = false; };
-  }, [searchQuery]);
-
   // Admin movie addition handler
   const handleAddMovieToCatalog = (newMovie) => {
     setMovies(prev => [newMovie, ...prev]);
@@ -82,10 +56,23 @@ export default function App() {
     return movies.find(m => m.featured) || movies[0] || null;
   }, [movies]);
 
-  // Sort Movies for Grid
-  const sortedMovies = useMemo(() => {
+  // Instant Search & Sort Movies across 204+ titles
+  const searchedAndSortedMovies = useMemo(() => {
     let list = [...movies];
 
+    // Search filter across title, overview, genres, director, cast
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase().trim();
+      list = list.filter(m =>
+        (m.title && m.title.toLowerCase().includes(q)) ||
+        (m.overview && m.overview.toLowerCase().includes(q)) ||
+        (m.genres && m.genres.some(g => g.toLowerCase().includes(q))) ||
+        (m.director && m.director.toLowerCase().includes(q)) ||
+        (m.cast && m.cast.some(c => c.toLowerCase().includes(q)))
+      );
+    }
+
+    // Sort filter
     if (sortBy === 'rating') {
       list.sort((a, b) => b.vote_average - a.vote_average);
     } else if (sortBy === 'newest') {
@@ -97,7 +84,7 @@ export default function App() {
     }
 
     return list;
-  }, [movies, sortBy]);
+  }, [movies, searchQuery, sortBy]);
 
   // Toggle Watchlist Handler
   const handleToggleWatchlist = (movie, targetStatus = 'want') => {
@@ -180,7 +167,7 @@ export default function App() {
 
             {/* Movie Catalog Grid */}
             <MovieGrid
-              movies={sortedMovies}
+              movies={searchedAndSortedMovies}
               selectedGenre={selectedGenre}
               setSelectedGenre={setSelectedGenre}
               sortBy={sortBy}
