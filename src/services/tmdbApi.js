@@ -1,5 +1,4 @@
 import { MOCK_MOVIES } from '../data/mockMovies';
-import { storage } from './storage';
 
 const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
 const TMDB_IMAGE_BASE = 'https://image.tmdb.org/t/p/w500';
@@ -9,15 +8,32 @@ const TMDB_BACKDROP_BASE = 'https://image.tmdb.org/t/p/w1280';
 const PRIMARY_TMDB_KEY = '4e44d9029b1270a757cddc766a1bcb63';
 const BACKUP_TMDB_KEY = '1cf50e6248dc270629e802686245c2c8';
 
-export const tmdbApi = {
-  getApiKey: () => {
-    const settings = storage.getSettings();
-    if (settings.tmdbApiKey && settings.tmdbApiKey.length > 10) {
-      return settings.tmdbApiKey.trim();
-    }
-    return PRIMARY_TMDB_KEY;
-  },
+// Robust fetch helper with automatic key failover
+async function fetchTMDB(path, params = {}) {
+  const queryParams = new URLSearchParams({ ...params, api_key: PRIMARY_TMDB_KEY });
+  let url = `${TMDB_BASE_URL}${path}?${queryParams.toString()}`;
 
+  try {
+    let res = await fetch(url);
+    if (res.ok) {
+      const data = await res.json();
+      if (data && (data.results || data.id)) return data;
+    }
+    
+    // Backup Key Retry
+    queryParams.set('api_key', BACKUP_TMDB_KEY);
+    url = `${TMDB_BASE_URL}${path}?${queryParams.toString()}`;
+    res = await fetch(url);
+    if (res.ok) {
+      return await res.json();
+    }
+  } catch (err) {
+    console.warn('TMDB Fetch exception:', path, err);
+  }
+  return null;
+}
+
+export const tmdbApi = {
   // Helper to format TMDB response item into MovieMate format
   formatMovie: (movie) => {
     const poster = movie.poster_path
@@ -66,27 +82,29 @@ export const tmdbApi = {
     };
   },
 
-  // Fetch Comprehensive Live Movie Catalog (80+ TMDB movies across all categories & pages)
+  // Fetch Comprehensive Live Movie Catalog (160+ TMDB movies across all categories & pages)
   getTrending: async () => {
-    let apiKey = tmdbApi.getApiKey();
     try {
-      const endpoints = [
-        `${TMDB_BASE_URL}/trending/movie/week?api_key=${apiKey}&page=1`,
-        `${TMDB_BASE_URL}/trending/movie/week?api_key=${apiKey}&page=2`,
-        `${TMDB_BASE_URL}/movie/popular?api_key=${apiKey}&page=1`,
-        `${TMDB_BASE_URL}/movie/popular?api_key=${apiKey}&page=2`,
-        `${TMDB_BASE_URL}/movie/top_rated?api_key=${apiKey}&page=1`,
-        `${TMDB_BASE_URL}/movie/now_playing?api_key=${apiKey}&page=1`
+      const fetchPromises = [
+        fetchTMDB('/trending/movie/week', { page: 1 }),
+        fetchTMDB('/trending/movie/week', { page: 2 }),
+        fetchTMDB('/trending/movie/week', { page: 3 }),
+        fetchTMDB('/movie/popular', { page: 1 }),
+        fetchTMDB('/movie/popular', { page: 2 }),
+        fetchTMDB('/movie/popular', { page: 3 }),
+        fetchTMDB('/movie/top_rated', { page: 1 }),
+        fetchTMDB('/movie/top_rated', { page: 2 }),
+        fetchTMDB('/movie/now_playing', { page: 1 }),
+        fetchTMDB('/movie/now_playing', { page: 2 })
       ];
 
-      const responses = await Promise.allSettled(endpoints.map(url => fetch(url).then(r => r.json())));
-      
+      const resultsData = await Promise.all(fetchPromises);
       const allMovies = [];
       const seenIds = new Set();
 
-      responses.forEach(res => {
-        if (res.status === 'fulfilled' && res.value && res.value.results) {
-          res.value.results.forEach(m => {
+      resultsData.forEach(data => {
+        if (data && data.results) {
+          data.results.forEach(m => {
             if (m && m.id && m.poster_path && !seenIds.has(m.id)) {
               seenIds.add(m.id);
               allMovies.push(m);
@@ -112,21 +130,19 @@ export const tmdbApi = {
   searchMovies: async (query) => {
     if (!query.trim()) return tmdbApi.getTrending();
     
-    let apiKey = tmdbApi.getApiKey();
     try {
-      const endpoints = [
-        `${TMDB_BASE_URL}/search/movie?api_key=${apiKey}&query=${encodeURIComponent(query)}&page=1`,
-        `${TMDB_BASE_URL}/search/movie?api_key=${apiKey}&query=${encodeURIComponent(query)}&page=2`
-      ];
-
-      const responses = await Promise.allSettled(endpoints.map(url => fetch(url).then(r => r.json())));
+      const resultsData = await Promise.all([
+        fetchTMDB('/search/movie', { query: query, page: 1 }),
+        fetchTMDB('/search/movie', { query: query, page: 2 }),
+        fetchTMDB('/search/movie', { query: query, page: 3 })
+      ]);
       
       const searchMoviesList = [];
       const seenIds = new Set();
 
-      responses.forEach(res => {
-        if (res.status === 'fulfilled' && res.value && res.value.results) {
-          res.value.results.forEach(m => {
+      resultsData.forEach(data => {
+        if (data && data.results) {
+          data.results.forEach(m => {
             if (m && m.id && m.poster_path && !seenIds.has(m.id)) {
               seenIds.add(m.id);
               searchMoviesList.push(m);
@@ -154,15 +170,9 @@ export const tmdbApi = {
 
   // Get Detailed Movie Information including Trailer Videos & Cast
   getMovieDetails: async (movieId) => {
-    let apiKey = tmdbApi.getApiKey();
     try {
-      let res = await fetch(`${TMDB_BASE_URL}/movie/${movieId}?api_key=${apiKey}&append_to_response=videos,credits,similar`);
-      if (!res.ok) {
-        res = await fetch(`${TMDB_BASE_URL}/movie/${movieId}?api_key=${BACKUP_TMDB_KEY}&append_to_response=videos,credits,similar`);
-      }
-
-      if (res.ok) {
-        const data = await res.json();
+      const data = await fetchTMDB(`/movie/${movieId}`, { append_to_response: 'videos,credits,similar' });
+      if (data) {
         const formatted = tmdbApi.formatMovie(data);
         
         // Extract YouTube Trailer
