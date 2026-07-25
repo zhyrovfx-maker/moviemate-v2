@@ -1,17 +1,1139 @@
 export const GENRES = [
-  { id: 'all', name: 'All', icon: 'fa-film' },
+  { id: 'all', name: 'All', icon: 'fa-globe' },
+  { id: 'movie', name: 'Movies', icon: 'fa-film' },
   { id: 'series', name: 'TV Series', icon: 'fa-tv' },
+  { id: 'anime', name: 'Anime', icon: 'fa-dragon' },
+  { id: 'kdrama', name: 'K-Drama', icon: 'fa-heart' },
+  { id: 'indian', name: 'Indian Cinema', icon: 'fa-clapperboard' },
   { id: 'action', name: 'Action', icon: 'fa-burst' },
   { id: 'sci-fi', name: 'Sci-Fi', icon: 'fa-robot' },
   { id: 'drama', name: 'Drama', icon: 'fa-masks-theater' },
   { id: 'animation', name: 'Animation', icon: 'fa-wand-magic-sparkles' },
-  { id: 'thriller', name: 'Thriller', icon: 'fa-skull' },
   { id: 'comedy', name: 'Comedy', icon: 'fa-face-laugh-beam' },
-  { id: 'horror', name: 'Horror', icon: 'fa-ghost' },
-  { id: 'adventure', name: 'Adventure', icon: 'fa-compass' }
+  { id: 'horror', name: 'Horror', icon: 'fa-ghost' }
 ];
 
 export const MOCK_MOVIES = [
+  {
+    "id": 1026260,
+    "title": "Naruto",
+    "original_title": "ナルト",
+    "tagline": "Popular Global Production",
+    "overview": "Naruto Uzumaki, a mischievous adolescent ninja, struggles as he searches for recognition and dreams of becoming the Hokage, the village's leader and strongest ninja.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/1GVfX7kqIbQBp38Riiy1QLQkhJQ.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/5F0HVEgkgP99fEWDjPyikGt9jQi.jpg",
+    "vote_average": 8.4,
+    "vote_count": 6057,
+    "release_date": "2002-10-03",
+    "year": "2002",
+    "runtime": 120,
+    "genres": [
+      "ANIME",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "anime",
+      "series"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "tag": "anime"
+  },
+  {
+    "id": 1091110,
+    "title": "ONE PIECE",
+    "original_title": "ONE PIECE",
+    "tagline": "Popular Global Production",
+    "overview": "With his straw hat and ragtag crew, young pirate Monkey D. Luffy goes on an epic voyage for treasure.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/blWCPEqDGLBuLB9u89CxP9ORQP4.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/qD211Hb5XwFxrszzBBe5EUYJerh.jpg",
+    "vote_average": 8.1,
+    "vote_count": 1861,
+    "release_date": "2023-08-31",
+    "year": "2023",
+    "runtime": 120,
+    "genres": [
+      "ANIME",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "anime",
+      "series"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "tag": "anime"
+  },
+  {
+    "id": 992971,
+    "title": "Dragon Ball Z",
+    "original_title": "ドラゴンボールゼット",
+    "tagline": "Popular Global Production",
+    "overview": "Now happily married and with a son, martial arts champion Goku must defend Earth from a series of extraterrestrial invaders bent on destruction.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/oQ5CnVj3TRifXl2bIOri6H6rfNe.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/ydf1CeiBLfdxiyNTpskM0802TKl.jpg",
+    "vote_average": 8.4,
+    "vote_count": 4932,
+    "release_date": "1989-04-26",
+    "year": "1989",
+    "runtime": 120,
+    "genres": [
+      "ANIME",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "anime",
+      "series"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "tag": "anime"
+  },
+  {
+    "id": 1011911,
+    "title": "Fullmetal Alchemist: Brotherhood",
+    "original_title": "鋼の錬金術師 FULLMETAL ALCHEMIST",
+    "tagline": "Popular Global Production",
+    "overview": "Disregard for alchemy’s laws ripped half of Edward Elric’s limbs from his body and left his brother Alphonse’s soul clinging to a suit of armor. To restore what was lost, the brothers seek the Philosopher’s Stone. Enemies and allies – the corrupt military, the Homunculi, and foreign alchemists – will alter the Elric brothers course, but their purpose will remain unchanged and their bond unbreakable.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/5ZFUEOULaVml7pQuXxhpR2SmVUw.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/2UG177tWHy7xRmMKWJHB7nAUmKd.jpg",
+    "vote_average": 8.7,
+    "vote_count": 2516,
+    "release_date": "2009-04-05",
+    "year": "2009",
+    "runtime": 120,
+    "genres": [
+      "ANIME",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "anime",
+      "series"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "tag": "anime"
+  },
+  {
+    "id": 1075479,
+    "title": "JUJUTSU KAISEN",
+    "original_title": "呪術廻戦",
+    "tagline": "Popular Global Production",
+    "overview": "Yuji Itadori is a boy with tremendous physical strength, though he lives a completely ordinary high school life. One day, to save a classmate who has been attacked by curses, he eats the finger of Ryomen Sukuna, taking the curse into his own soul. From then on, he shares one body with Ryomen Sukuna. Guided by the most powerful of sorcerers, Satoru Gojo, Itadori is admitted to Tokyo Jujutsu High School, an organization that fights the curses... and thus begins the heroic tale of a boy who became a curse to exorcise a curse, a life from which he could never turn back.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/fHpKWq9ayzSk8nSwqRuaAUemRKh.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/lthkKBLe1rX6iThgVFg22O02sJw.jpg",
+    "vote_average": 8.6,
+    "vote_count": 4566,
+    "release_date": "2020-10-03",
+    "year": "2020",
+    "runtime": 120,
+    "genres": [
+      "ANIME",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "anime",
+      "series"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "tag": "anime"
+  },
+  {
+    "id": 1045930,
+    "title": "My Hero Academia",
+    "original_title": "僕のヒーローアカデミア",
+    "tagline": "Popular Global Production",
+    "overview": "After he saves a bully from a Villain, a normal student is granted a superpower that allows him to attend a high school training academy for Heroes.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/phuYuzqWW9ru8EA3HVjE9W2Rr3M.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/ol0H2DGp4ifBHA4JDlCpwJWxnY2.jpg",
+    "vote_average": 8.6,
+    "vote_count": 5335,
+    "release_date": "2016-04-03",
+    "year": "2016",
+    "runtime": 120,
+    "genres": [
+      "ANIME",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "anime",
+      "series"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "tag": "anime"
+  },
+  {
+    "id": 1068803,
+    "title": "Vinland Saga",
+    "original_title": "ヴィンランド・サガ",
+    "tagline": "Popular Global Production",
+    "overview": "For a thousand years, the Vikings have made quite a name and reputation for themselves as the strongest families with a thirst for violence. Thorfinn, the son of one of the Vikings' greatest warriors, spends his boyhood in a battlefield enhancing his skills in his adventure to redeem his most-desired revenge after his father was murdered.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/vUHlpA5c1NXkds59reY3HMb4Abs.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/pSLuy0OfN1QblifDVoEhAvst4et.jpg",
+    "vote_average": 8.5,
+    "vote_count": 975,
+    "release_date": "2019-07-08",
+    "year": "2019",
+    "runtime": 120,
+    "genres": [
+      "ANIME",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "anime",
+      "series"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "tag": "anime"
+  },
+  {
+    "id": 1094410,
+    "title": "Chainsaw Man",
+    "original_title": "チェンソーマン",
+    "tagline": "Popular Global Production",
+    "overview": "Denji has a simple dream—to live a happy and peaceful life, spending time with a girl he likes. This is a far cry from reality, however, as Denji is forced by the yakuza into killing devils in order to pay off his crushing debts. Using his pet devil Pochita as a weapon, he is ready to do anything for a bit of cash.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/yVtx7Xn9UxNJqvG2BkvhCcmed9S.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/5DUMPBSnHOZsbBv81GFXZXvDpo6.jpg",
+    "vote_average": 8.5,
+    "vote_count": 2249,
+    "release_date": "2022-10-12",
+    "year": "2022",
+    "runtime": 120,
+    "genres": [
+      "ANIME",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "anime",
+      "series"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "tag": "anime"
+  },
+  {
+    "id": 1022509,
+    "title": "Steins;Gate",
+    "original_title": "Steins;Gate",
+    "tagline": "Popular Global Production",
+    "overview": "A group of friends have customized their microwave so that it can send text messages to the past. As they perform different experiments, an organization named SERN who has been doing their own research on time travel tracks them down and now the characters have to find a way to avoid being captured by them.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/bj9lZLRey7ZTWNbA9o3L0tW0HfW.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/gDvxT2z6TNxervG97WfpePRZ3aR.jpg",
+    "vote_average": 8.5,
+    "vote_count": 974,
+    "release_date": "2011-04-06",
+    "year": "2011",
+    "runtime": 120,
+    "genres": [
+      "ANIME",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "anime",
+      "series"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "tag": "anime"
+  },
+  {
+    "id": 1025952,
+    "title": "Hunter x Hunter",
+    "original_title": "HUNTER×HUNTER",
+    "tagline": "Popular Global Production",
+    "overview": "Gon Freecss discovers that the father he had always been told was dead was actually alive the whole time. Ging is a famous Hunter: an individual who has proven themself an elite member of humanity. Gon becomes determined to follow in his father's footsteps, pass the rigorous Hunter Examination.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/eobAuhCJA8oRp814V67WhezVXtQ.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/575sxZXNNulSlIz7DvtWH5r4lkC.jpg",
+    "vote_average": 8.4,
+    "vote_count": 220,
+    "release_date": "1999-10-16",
+    "year": "1999",
+    "runtime": 120,
+    "genres": [
+      "ANIME",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "anime",
+      "series"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "tag": "anime"
+  },
+  {
+    "id": 880128,
+    "title": "Princess Mononoke",
+    "original_title": "もののけ姫",
+    "tagline": "Popular Global Production",
+    "overview": "Ashitaka, a prince of the disappearing Emishi people, is cursed by a demonized boar god and must journey to the west to find a cure. Along the way, he encounters San, a young human woman fighting to protect the forest, and Lady Eboshi, who is trying to destroy it. Ashitaka must find a way to bring balance to this conflict.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/cMYCDADoLKLbB83g4WnJegaZimC.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/gl0jzn4BupSbL2qMVeqrjKkF9Js.jpg",
+    "vote_average": 8.3,
+    "vote_count": 9119,
+    "release_date": "1997-07-12",
+    "year": "1997",
+    "runtime": 120,
+    "genres": [
+      "ANIME",
+      "Movie"
+    ],
+    "genre_ids": [
+      "anime",
+      "movie"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "tag": "anime"
+  },
+  {
+    "id": 884935,
+    "title": "Howl's Moving Castle",
+    "original_title": "ハウルの動く城",
+    "tagline": "Popular Global Production",
+    "overview": "Sophie, a young milliner, is turned into an elderly woman by a witch who enters her shop and curses her. She encounters a wizard named Howl and gets caught up in his resistance to fighting for the king.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/13kOl2v0nD2OLbVSHnHk8GUFEhO.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/nv5wwZou159v5OC61i4ElR7OqyY.jpg",
+    "vote_average": 8.4,
+    "vote_count": 11225,
+    "release_date": "2004-09-09",
+    "year": "2004",
+    "runtime": 120,
+    "genres": [
+      "ANIME",
+      "Movie"
+    ],
+    "genre_ids": [
+      "anime",
+      "movie"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "tag": "anime"
+  },
+  {
+    "id": 1062591,
+    "title": "Goblin Slayer",
+    "original_title": "ゴブリンスレイヤー",
+    "tagline": "Popular Global Production",
+    "overview": "\"I'm not saving the world. I just kill goblins.\"\n\nRumor has it that, in a certain guild in the middle of nowhere, there is an extraordinary man who has climbed all the way to the Silver rank just by killing goblins. At the same guild, a priestess who's just become a new adventurer has formed her first party... and the man who ends up rescuing that party when they get into trouble is none other than the Goblin Slayer.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/x8ZQyxAFjz9jtCGivbOMYUC4Tp3.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/65XyAN0PrUkkfqvGbFRLjk5x3wZ.jpg",
+    "vote_average": 8,
+    "vote_count": 617,
+    "release_date": "2018-10-07",
+    "year": "2018",
+    "runtime": 120,
+    "genres": [
+      "KDRAMA",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "kdrama",
+      "series"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "tag": "kdrama"
+  },
+  {
+    "id": 1134825,
+    "title": "Business Proposal",
+    "original_title": "사내맞선",
+    "tagline": "Popular Global Production",
+    "overview": "In disguise as her friend, Ha-ri shows up to a blind date to scare him away. But plans go awry when he turns out to be her CEO — and makes a proposal.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/iLh7L8ZuvgdxFaM9sImyv2iKYLe.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/lq0YqJuffMuZhoKTiC5xDqvtCSn.jpg",
+    "vote_average": 8.5,
+    "vote_count": 776,
+    "release_date": "2022-02-28",
+    "year": "2022",
+    "runtime": 120,
+    "genres": [
+      "KDRAMA",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "kdrama",
+      "series"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "tag": "kdrama"
+  },
+  {
+    "id": 1045143,
+    "title": "Descendants of the Sun",
+    "original_title": "태양의 후예",
+    "tagline": "Popular Global Production",
+    "overview": "After a chance meeting in a hospital, an ardent soldier falls for a gifted surgeon. Opposing philosophies tear them apart, but fate has other plans.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/xxGomfml0x9iyPBS4StBjbRRu65.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/4ODaZrnKT7iM6sfgDB8ud8FdrVr.jpg",
+    "vote_average": 8.3,
+    "vote_count": 823,
+    "release_date": "2016-02-24",
+    "year": "2016",
+    "runtime": 120,
+    "genres": [
+      "KDRAMA",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "kdrama",
+      "series"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "tag": "kdrama"
+  },
+  {
+    "id": 1221506,
+    "title": "It's Okay to Not Be Okay",
+    "original_title": "It's Okay to Not Be Okay",
+    "tagline": "Popular Global Production",
+    "overview": "An author with severe antisocial tendencies learns to confront her deep emotional wounds when she meets a stranger who challenges her cold facade.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/7rQ7E7u0y8VJgnUeDT6oF1J32Gu.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/dNAp924hXUYxaGxGJRLlB0dvu8e.jpg",
+    "vote_average": 9.7,
+    "vote_count": 3,
+    "release_date": "2025-07-21",
+    "year": "2025",
+    "runtime": 120,
+    "genres": [
+      "KDRAMA",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "kdrama",
+      "series"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "tag": "kdrama"
+  },
+  {
+    "id": 1177067,
+    "title": "Extraordinary Attorney Woo",
+    "original_title": "이상한 변호사 우영우",
+    "tagline": "Popular Global Production",
+    "overview": "With a genius-level IQ, Woo Young-woo learns to embrace her extraordinary self while forming a tight-knit community of friends and allies.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/zuNOQVI4rEaqwknrfQUVKtlKE2C.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/tmgtlnBnoFvk52xZBO7Z0pTmN9b.jpg",
+    "vote_average": 8.5,
+    "vote_count": 956,
+    "release_date": "2022-06-29",
+    "year": "2022",
+    "runtime": 120,
+    "genres": [
+      "KDRAMA",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "kdrama",
+      "series"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "tag": "kdrama"
+  },
+  {
+    "id": 892259,
+    "title": "Sholay",
+    "original_title": "शोले",
+    "tagline": "Popular Global Production",
+    "overview": "After his family is slain by notorious bandit Gabbar Singh, former Inspector Thakur Baldev Singh enlists low-level outlaws Jai and Veeru to capture Gabbar and seek revenge.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/ya9bwgqA4eNl5bQ9QqS0jcmRoBS.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/8aYAfAPolsRFrHbP1rafeSgg2Ew.jpg",
+    "vote_average": 7,
+    "vote_count": 322,
+    "release_date": "1975-08-15",
+    "year": "1975",
+    "runtime": 120,
+    "genres": [
+      "INDIAN",
+      "Movie"
+    ],
+    "genre_ids": [
+      "indian",
+      "movie"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "tag": "indian"
+  },
+  {
+    "id": 899666,
+    "title": "Lagaan: Once Upon a Time in India",
+    "original_title": "लगान",
+    "tagline": "Popular Global Production",
+    "overview": "The year is 1893 and India is under British occupation. In a small village, the tyrannical Captain Russell has imposed an unprecedented land tax on its citizens. Outraged, Bhuvan, a rebellious farmer, rallies the villagers to publicly oppose the tax. Russell offers a novel way to settle the dispute: he challenges Bhuvan and his men to a game of cricket, a sport completely foreign to India. If Bhuvan and his men can defeat Russell's team, the tax will be repealed.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/yNX9lFRAFeNLNRIXdqZK9gYrYKa.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/76VwduxQMkVXOUktps85dE0lLeP.jpg",
+    "vote_average": 7.3,
+    "vote_count": 651,
+    "release_date": "2001-06-15",
+    "year": "2001",
+    "runtime": 120,
+    "genres": [
+      "INDIAN",
+      "Movie"
+    ],
+    "genre_ids": [
+      "indian",
+      "movie"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "tag": "indian"
+  },
+  {
+    "id": 1232173,
+    "title": "Drishyam",
+    "original_title": "दृश्यम्",
+    "tagline": "Popular Global Production",
+    "overview": "When his family stares down the barrel of criminal charges, a commoner channels his street smarts and knowledge of action films to tie the long arm of the law into an investigative Gordian knot.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/gIClWRv5OSe8rl5Koi0AeUcCZ9Z.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/5jxesZtbjNtsDitSBvK1amtd7o2.jpg",
+    "vote_average": 7.5,
+    "vote_count": 500,
+    "release_date": "2015-07-30",
+    "year": "2015",
+    "runtime": 120,
+    "genres": [
+      "INDIAN",
+      "Movie"
+    ],
+    "genre_ids": [
+      "indian",
+      "movie"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "tag": "indian"
+  },
+  {
+    "id": 1570957,
+    "title": "Pushpa: The Rise",
+    "original_title": "పుష్పా - The Rise",
+    "tagline": "Popular Global Production",
+    "overview": "As Pushpa, a labourer, rises in the world of red sandalwood smuggling, he ends up making many enemies. However, violence ensues when the police try to topple his illegal business.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/yHaVMyFjv7q2schbFbWOzfWn23G.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/jQIcn51nsvMrpB9NFwEOb9QHhFt.jpg",
+    "vote_average": 6.7,
+    "vote_count": 194,
+    "release_date": "2021-12-16",
+    "year": "2021",
+    "runtime": 120,
+    "genres": [
+      "INDIAN",
+      "Movie"
+    ],
+    "genre_ids": [
+      "indian",
+      "movie"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "tag": "indian"
+  },
+  {
+    "id": 1992426,
+    "title": "Stree 2",
+    "original_title": "स्त्री 2: सरकटे का आतंक",
+    "tagline": "Popular Global Production",
+    "overview": "Following the events of 'Stree', the town of Chanderi is being haunted again. This time, women are mysteriously abducted by a terrifying headless entity. Once again, it's up to Vicky and friends to save their town and loved ones.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/nfnhwfUEFuSOxxf4jDdBlY6Lccw.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/fVV0A67kDjTTQ4CvUn8LoletRmI.jpg",
+    "vote_average": 6.7,
+    "vote_count": 97,
+    "release_date": "2024-08-15",
+    "year": "2024",
+    "runtime": 120,
+    "genres": [
+      "INDIAN",
+      "Movie"
+    ],
+    "genre_ids": [
+      "indian",
+      "movie"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "tag": "indian"
+  },
+  {
+    "id": 1073352,
+    "title": "The Family Man",
+    "original_title": "द फ़ैमिली मैन",
+    "tagline": "Popular Global Production",
+    "overview": "The story of a middle-class man who works for a special cell of the National Investigation Agency. While he tries to protect the nation from terrorists, he also has to protect his family from the impact of his secretive, high-pressure, and low paying job.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/tE1NUJqw9gV6AVjQ1GTK78LbWJ9.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/eEzKigDI64OomZV6VTJvoPGmVu1.jpg",
+    "vote_average": 7.7,
+    "vote_count": 191,
+    "release_date": "2019-09-20",
+    "year": "2019",
+    "runtime": 120,
+    "genres": [
+      "INDIAN",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "indian",
+      "series"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "tag": "indian"
+  },
+  {
+    "id": 1081352,
+    "title": "Panchayat",
+    "original_title": "पंचायत",
+    "tagline": "Popular Global Production",
+    "overview": "Panchayat is a comedy-drama, which captures the journey of an engineering graduate Abhishek, who for lack of a better job option joins as secretary of a panchayat office in a remote village of Uttar Pradesh. Stuck between crazy villagers and a difficult village lifestyle Abhishek starts his job with the sole motivation of getting out of there as soon as possible, for which he even prepares for CAT.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/xrfvAhrMdT6Uwg5fyTyQAZBYyiu.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/iZ8EtGAqKWZdRJPzWfFseNfVxjh.jpg",
+    "vote_average": 8.2,
+    "vote_count": 143,
+    "release_date": "2020-03-05",
+    "year": "2020",
+    "runtime": 120,
+    "genres": [
+      "INDIAN",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "indian",
+      "series"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "tag": "indian"
+  },
+  {
+    "id": 1112117,
+    "title": "Farzi",
+    "original_title": "फर्जी",
+    "tagline": "Popular Global Production",
+    "overview": "Sunny, a brilliant small-time artist is catapulted into the high-stakes world of counterfeiting when he creates the perfect fake currency note, even as Michael, a fiery, unorthodox task force officer wants to rid the country of the counterfeiting menace. In this thrilling cat-and-mouse race, losing is not an option!",
+    "poster_path": "https://image.tmdb.org/t/p/w500/cTS86RwEBIDgCgUmjWQTSoPsK6p.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/rGkjtv6UdL1ysDmZuBjbNl3PAA1.jpg",
+    "vote_average": 7.7,
+    "vote_count": 173,
+    "release_date": "2023-02-10",
+    "year": "2023",
+    "runtime": 120,
+    "genres": [
+      "INDIAN",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "indian",
+      "series"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "tag": "indian"
+  },
+  {
+    "id": 1067508,
+    "title": "Delhi Crime",
+    "original_title": "दिल्ली क्राइम",
+    "tagline": "Popular Global Production",
+    "overview": "Following the police force as they investigate high-profile crimes in Delhi, this series has seasons inspired by both real and fictional events.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/xkpkTj6KGsjSaet0VQaq0aTn31D.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/j6djmR4hi8ULL0xUPQN4ZVyzgVN.jpg",
+    "vote_average": 7.7,
+    "vote_count": 131,
+    "release_date": "2019-03-22",
+    "year": "2019",
+    "runtime": 120,
+    "genres": [
+      "INDIAN",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "indian",
+      "series"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "tag": "indian"
+  },
+  {
+    "id": 880238,
+    "title": "The Godfather",
+    "original_title": "The Godfather",
+    "tagline": "Popular Global Production",
+    "overview": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/tSPT36ZKlP2WVHJLM4cQPLSzv3b.jpg",
+    "vote_average": 8.7,
+    "vote_count": 23209,
+    "release_date": "1972-03-14",
+    "year": "1972",
+    "runtime": 120,
+    "genres": [
+      "MOVIE",
+      "Movie"
+    ],
+    "genre_ids": [
+      "movie",
+      "movie"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "tag": "movie"
+  },
+  {
+    "id": 880680,
+    "title": "Pulp Fiction",
+    "original_title": "Pulp Fiction",
+    "tagline": "Popular Global Production",
+    "overview": "A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
+    "vote_average": 8.5,
+    "vote_count": 30478,
+    "release_date": "1994-09-10",
+    "year": "1994",
+    "runtime": 120,
+    "genres": [
+      "MOVIE",
+      "Movie"
+    ],
+    "genre_ids": [
+      "movie",
+      "movie"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "tag": "movie"
+  },
+  {
+    "id": 880278,
+    "title": "The Shawshank Redemption",
+    "original_title": "The Shawshank Redemption",
+    "tagline": "Popular Global Production",
+    "overview": "Imprisoned in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/zfbjgQE1uSd9wiPTX4VzsLi0rGG.jpg",
+    "vote_average": 8.7,
+    "vote_count": 30837,
+    "release_date": "1994-09-23",
+    "year": "1994",
+    "runtime": 120,
+    "genres": [
+      "MOVIE",
+      "Movie"
+    ],
+    "genre_ids": [
+      "movie",
+      "movie"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "tag": "movie"
+  },
+  {
+    "id": 880550,
+    "title": "Fight Club",
+    "original_title": "Fight Club",
+    "tagline": "Popular Global Production",
+    "overview": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \"fight clubs\" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/jSziioSwPVrOy9Yow3XhWIBDjq1.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/c6OLXfKAk5BKeR6broC8pYiCquX.jpg",
+    "vote_average": 8.4,
+    "vote_count": 32405,
+    "release_date": "1999-10-15",
+    "year": "1999",
+    "runtime": 120,
+    "genres": [
+      "MOVIE",
+      "Movie"
+    ],
+    "genre_ids": [
+      "movie",
+      "movie"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "tag": "movie"
+  },
+  {
+    "id": 880013,
+    "title": "Forrest Gump",
+    "original_title": "Forrest Gump",
+    "tagline": "Popular Global Production",
+    "overview": "A man with a low IQ has accomplished great things in his life and been present during significant historic events—in each case, far exceeding what anyone imagined he could do. But despite all he has achieved, his one true love eludes him.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/Cw4hIUIAmSYfK9QfaUW5igp9La.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/66Kn4XWhkuPkJxOJyPEx4U2CUfN.jpg",
+    "vote_average": 8.5,
+    "vote_count": 30028,
+    "release_date": "1994-06-23",
+    "year": "1994",
+    "runtime": 120,
+    "genres": [
+      "MOVIE",
+      "Movie"
+    ],
+    "genre_ids": [
+      "movie",
+      "movie"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "tag": "movie"
+  },
+  {
+    "id": 880603,
+    "title": "The Matrix",
+    "original_title": "The Matrix",
+    "tagline": "Popular Global Production",
+    "overview": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/dXNAPwY7VrqMAo51EKhhCJfaGb5.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/tlm8UkiQsitc8rSuIAscQDCnP8d.jpg",
+    "vote_average": 8.3,
+    "vote_count": 28241,
+    "release_date": "1999-03-31",
+    "year": "1999",
+    "runtime": 120,
+    "genres": [
+      "MOVIE",
+      "Movie"
+    ],
+    "genre_ids": [
+      "movie",
+      "movie"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "tag": "movie"
+  },
+  {
+    "id": 880098,
+    "title": "Gladiator",
+    "original_title": "Gladiator",
+    "tagline": "Popular Global Production",
+    "overview": "After the death of Emperor Marcus Aurelius, his devious son takes power and demotes Maximus, one of Rome's most capable generals who Marcus preferred. Eventually, Maximus is forced to become a gladiator and battle to the death against other men for the amusement of paying audiences.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/wN2xWp1eIwCKOD0BHTcErTBv1Uq.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/jhk6D8pim3yaByu1801kMoxXFaX.jpg",
+    "vote_average": 8.2,
+    "vote_count": 21127,
+    "release_date": "2000-05-04",
+    "year": "2000",
+    "runtime": 120,
+    "genres": [
+      "MOVIE",
+      "Movie"
+    ],
+    "genre_ids": [
+      "movie",
+      "movie"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "tag": "movie"
+  },
+  {
+    "id": 1124786,
+    "title": "Whiplash",
+    "original_title": "Whiplash",
+    "tagline": "Popular Global Production",
+    "overview": "Under the direction of a ruthless instructor, a talented young drummer begins to pursue perfection at any cost, even his humanity.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/7fn624j5lj3xTme2SgiLCeuedmO.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/wbQa0EnWUyRzQ5d1pHLNRlmsCUP.jpg",
+    "vote_average": 8.4,
+    "vote_count": 16822,
+    "release_date": "2014-10-10",
+    "year": "2014",
+    "runtime": 120,
+    "genres": [
+      "MOVIE",
+      "Movie"
+    ],
+    "genre_ids": [
+      "movie",
+      "movie"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "tag": "movie"
+  },
+  {
+    "id": 1193369,
+    "title": "La La Land",
+    "original_title": "La La Land",
+    "tagline": "Popular Global Production",
+    "overview": "Mia, an aspiring actress, serves lattes to movie stars in between auditions and Sebastian, a jazz musician, scrapes by playing cocktail party gigs in dingy bars, but as success mounts they are faced with decisions that begin to fray the fragile fabric of their love affair, and the dreams they worked so hard to maintain in each other threaten to rip them apart.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/nlPCdZlHtRNcF6C9hzUH4ebmV1w.jpg",
+    "vote_average": 7.9,
+    "vote_count": 18247,
+    "release_date": "2016-12-01",
+    "year": "2016",
+    "runtime": 120,
+    "genres": [
+      "MOVIE",
+      "Movie"
+    ],
+    "genre_ids": [
+      "movie",
+      "movie"
+    ],
+    "director": "Renowned Creator",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "tag": "movie"
+  },
   {
     "id": 1429974,
     "title": "RRR",

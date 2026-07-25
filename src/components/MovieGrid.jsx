@@ -28,15 +28,27 @@ export default function MovieGrid({
     return true;
   };
 
-  // Flexible Genre Matcher with TV Series Support
+  // Comprehensive Category & Genre Matcher (Movies, TV Series, Anime, K-Drama, Indian Cinema, etc.)
   const isGenreMatch = (movie, targetGenre) => {
     if (targetGenre === 'all') return true;
     if (!movie) return false;
 
     const target = targetGenre.toLowerCase();
     
+    if (target === 'movie') {
+      return !movie.is_series;
+    }
     if (target === 'series') {
       return movie.is_series || (movie.genres && movie.genres.some(g => g.toLowerCase().includes('series') || g.toLowerCase().includes('tv')));
+    }
+    if (target === 'anime') {
+      return movie.tag === 'anime' || (movie.genres && movie.genres.some(g => g.toLowerCase().includes('anime') || g.toLowerCase().includes('japan')));
+    }
+    if (target === 'kdrama') {
+      return movie.tag === 'kdrama' || (movie.genres && movie.genres.some(g => g.toLowerCase().includes('kdrama') || g.toLowerCase().includes('korea')));
+    }
+    if (target === 'indian') {
+      return movie.tag === 'indian' || (movie.genres && movie.genres.some(g => g.toLowerCase().includes('india') || g.toLowerCase().includes('indian')));
     }
 
     if (!movie.genres || movie.genres.length === 0) return false;
@@ -68,7 +80,7 @@ export default function MovieGrid({
     <section style={{ marginTop: '1.5rem' }}>
       {/* Header Controls */}
       <div className="section-controls-header">
-        {/* Genre & Series Pill Filter Tabs */}
+        {/* Category Pill Filter Tabs (Movies, TV Series, Anime, K-Drama, Indian Cinema, etc.) */}
         <div className="genre-pill-container">
           {GENRES.map(g => (
             <button
@@ -107,7 +119,7 @@ export default function MovieGrid({
         </div>
       </div>
 
-      {/* Movies & TV Series Grid */}
+      {/* Movies, Series & Anime Grid */}
       {filteredMovies.length > 0 ? (
         <div className="movie-grid">
           {filteredMovies.map(movie => (
@@ -132,7 +144,7 @@ export default function MovieGrid({
           margin: '2rem 0'
         }}>
           <div style={{ fontSize: '3rem', color: '#6366f1', marginBottom: '1rem' }}>
-            <i className="fa-solid fa-tv" />
+            <i className="fa-solid fa-globe" />
           </div>
           <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: '#f8fafc', marginBottom: '0.5rem' }}>
             No Titles Found in this Category
