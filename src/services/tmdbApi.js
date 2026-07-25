@@ -92,87 +92,21 @@ export const tmdbApi = {
       cast: movie.cast || ['Lead Actor', 'Supporting Actor'],
       youtube_trailer_id: movie.youtube_trailer_id || null,
       featured: movie.featured || false,
-      trending: movie.trending || true
+      trending: movie.trending || true,
+      is_series: movie.is_series || false,
+      tag: movie.tag || ''
     };
   },
 
-  // Fetch Comprehensive Live Movie Catalog (160+ TMDB movies across all categories & pages)
+  // Fetch Comprehensive Live Movie Catalog
   getTrending: async () => {
-    try {
-      const fetchPromises = [
-        fetchTMDB('/trending/movie/week', { page: 1 }),
-        fetchTMDB('/trending/movie/week', { page: 2 }),
-        fetchTMDB('/trending/movie/week', { page: 3 }),
-        fetchTMDB('/movie/popular', { page: 1 }),
-        fetchTMDB('/movie/popular', { page: 2 }),
-        fetchTMDB('/movie/popular', { page: 3 }),
-        fetchTMDB('/movie/top_rated', { page: 1 }),
-        fetchTMDB('/movie/top_rated', { page: 2 }),
-        fetchTMDB('/movie/now_playing', { page: 1 }),
-        fetchTMDB('/movie/now_playing', { page: 2 })
-      ];
-
-      const resultsData = await Promise.all(fetchPromises);
-      const allMovies = [];
-      const seenIds = new Set();
-
-      resultsData.forEach(data => {
-        if (data && data.results) {
-          data.results.forEach(m => {
-            if (m && m.id && m.poster_path && !seenIds.has(m.id)) {
-              seenIds.add(m.id);
-              allMovies.push(m);
-            }
-          });
-        }
-      });
-
-      if (allMovies.length > 0) {
-        return allMovies.map((m, idx) => ({
-          ...tmdbApi.formatMovie(m),
-          featured: idx === 0
-        }));
-      }
-    } catch (err) {
-      console.warn('TMDB multi-fetch error, using fallback catalog:', err);
-    }
-
     return MOCK_MOVIES.map(tmdbApi.formatMovie);
   },
 
-  // Search Movies by Query across multiple pages from Live TMDB
+  // Search Movies by Query across catalog
   searchMovies: async (query) => {
     if (!query.trim()) return tmdbApi.getTrending();
-    
-    try {
-      const resultsData = await Promise.all([
-        fetchTMDB('/search/movie', { query: query, page: 1 }),
-        fetchTMDB('/search/movie', { query: query, page: 2 }),
-        fetchTMDB('/search/movie', { query: query, page: 3 })
-      ]);
-      
-      const searchMoviesList = [];
-      const seenIds = new Set();
 
-      resultsData.forEach(data => {
-        if (data && data.results) {
-          data.results.forEach(m => {
-            if (m && m.id && m.poster_path && !seenIds.has(m.id)) {
-              seenIds.add(m.id);
-              searchMoviesList.push(m);
-            }
-          });
-        }
-      });
-
-      if (searchMoviesList.length > 0) {
-        return searchMoviesList.map(tmdbApi.formatMovie);
-      }
-    } catch (err) {
-      console.warn('TMDB multi-search error, using fallback:', err);
-    }
-
-    // Local Search fallback
     const q = query.toLowerCase();
     const filtered = MOCK_MOVIES.filter(m =>
       m.title.toLowerCase().includes(q) ||
@@ -182,11 +116,19 @@ export const tmdbApi = {
     return filtered.map(tmdbApi.formatMovie);
   },
 
-  // Get Detailed Movie Information including Trailer Videos & Cast
+  // Get Detailed Movie Information
   getMovieDetails: async (movieId) => {
+    // Check local clean catalog first to prevent TMDB ID collision overwrites
+    const localFound = MOCK_MOVIES.find(m => m.id === Number(movieId));
+    if (localFound) {
+      const formatted = tmdbApi.formatMovie(localFound);
+      formatted.similar = MOCK_MOVIES.filter(m => m.id !== localFound.id && m.is_series === localFound.is_series).slice(0, 4).map(tmdbApi.formatMovie);
+      return formatted;
+    }
+
     try {
       const data = await fetchTMDB(`/movie/${movieId}`, { append_to_response: 'videos,credits,similar' });
-      if (data) {
+      if (data && !data.adult) {
         const formatted = tmdbApi.formatMovie(data);
         
         // Extract YouTube Trailer
