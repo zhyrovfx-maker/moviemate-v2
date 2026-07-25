@@ -16,7 +16,7 @@ export const MOCK_MOVIES = [
     "id": 901396,
     "title": "Breaking Bad",
     "original_title": "Breaking Bad",
-    "tagline": "Popular TV Series",
+    "tagline": "Acclaimed TV Series",
     "overview": "Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.",
     "poster_path": "https://image.tmdb.org/t/p/w500/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg",
     "backdrop_path": "https://image.tmdb.org/t/p/w1280/tsRy63Mu5cu8etL1X7ZLyf7UP1M.jpg",
@@ -24,7 +24,7 @@ export const MOCK_MOVIES = [
     "vote_count": 18171,
     "release_date": "2008-01-20",
     "year": "2008",
-    "runtime": 45,
+    "runtime": 48,
     "genres": [
       "TV Series",
       "Drama"
@@ -36,8 +36,8 @@ export const MOCK_MOVIES = [
     ],
     "director": "Showrunner",
     "cast": [
-      "Lead Actor",
-      "Supporting Actor"
+      "Lead Cast",
+      "Ensemble Cast"
     ],
     "youtube_trailer_id": null,
     "featured": false,
@@ -48,7 +48,7 @@ export const MOCK_MOVIES = [
     "id": 966732,
     "title": "Stranger Things",
     "original_title": "Stranger Things",
-    "tagline": "Popular TV Series",
+    "tagline": "Acclaimed TV Series",
     "overview": "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
     "poster_path": "https://image.tmdb.org/t/p/w500/uOOtwVbSr4QDjAGIifLDwpb2Pdl.jpg",
     "backdrop_path": "https://image.tmdb.org/t/p/w1280/56v2KjBlU4XaOv9rVYEQypROD7P.jpg",
@@ -56,7 +56,7 @@ export const MOCK_MOVIES = [
     "vote_count": 21514,
     "release_date": "2016-07-15",
     "year": "2016",
-    "runtime": 45,
+    "runtime": 48,
     "genres": [
       "TV Series",
       "Drama"
@@ -68,8 +68,8 @@ export const MOCK_MOVIES = [
     ],
     "director": "Showrunner",
     "cast": [
-      "Lead Actor",
-      "Supporting Actor"
+      "Lead Cast",
+      "Ensemble Cast"
     ],
     "youtube_trailer_id": null,
     "featured": false,
@@ -80,7 +80,7 @@ export const MOCK_MOVIES = [
     "id": 1000088,
     "title": "The Last of Us",
     "original_title": "The Last of Us",
-    "tagline": "Popular TV Series",
+    "tagline": "Acclaimed TV Series",
     "overview": "Twenty years after modern civilization has been destroyed, Joel, a hardened survivor, is hired to smuggle Ellie, a 14-year-old girl, out of an oppressive quarantine zone. What starts as a small job soon becomes a brutal, heartbreaking journey, as they both must traverse the United States and depend on each other for survival.",
     "poster_path": "https://image.tmdb.org/t/p/w500/dmo6TYuuJgaYinXBPjrgG9mB5od.jpg",
     "backdrop_path": "https://image.tmdb.org/t/p/w1280/acevLdSl5I2MK5RYAm7gwAndt1w.jpg",
@@ -88,7 +88,7 @@ export const MOCK_MOVIES = [
     "vote_count": 7168,
     "release_date": "2023-01-15",
     "year": "2023",
-    "runtime": 45,
+    "runtime": 48,
     "genres": [
       "TV Series",
       "Drama"
@@ -100,8 +100,72 @@ export const MOCK_MOVIES = [
     ],
     "director": "Showrunner",
     "cast": [
-      "Lead Actor",
-      "Supporting Actor"
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 901399,
+    "title": "Game of Thrones",
+    "original_title": "Game of Thrones",
+    "tagline": "Acclaimed TV Series",
+    "overview": "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/2OMB0ynKlyIenMJWI2Dy9IWT4c.jpg",
+    "vote_average": 8.5,
+    "vote_count": 27318,
+    "release_date": "2011-04-17",
+    "year": "2011",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 994997,
+    "title": "House of the Dragon",
+    "original_title": "House of the Dragon",
+    "tagline": "Acclaimed TV Series",
+    "overview": "The Targaryen dynasty is at the absolute apex of its power, with more than 15 dragons under their yoke. Most empires crumble from such heights. In the case of the Targaryens, their slow fall begins when King Viserys breaks with a century of tradition by naming his daughter Rhaenyra heir to the Iron Throne. But when Viserys later fathers a son, the court is shocked when Rhaenyra retains her status as his heir, and seeds of division sow friction across the realm.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/7V0Ebks0GgpKvQ7QbLAIdX5dos4.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/577eXC8wFQT0eUrJcgznSiFPRmk.jpg",
+    "vote_average": 8.4,
+    "vote_count": 6703,
+    "release_date": "2022-08-21",
+    "year": "2022",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
     ],
     "youtube_trailer_id": null,
     "featured": false,
@@ -112,7 +176,7 @@ export const MOCK_MOVIES = [
     "id": 982856,
     "title": "The Mandalorian",
     "original_title": "The Mandalorian",
-    "tagline": "Popular TV Series",
+    "tagline": "Acclaimed TV Series",
     "overview": "After the fall of the Galactic Empire, lawlessness has spread throughout the galaxy. A lone gunfighter makes his way through the outer reaches, earning his keep as a bounty hunter.",
     "poster_path": "https://image.tmdb.org/t/p/w500/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg",
     "backdrop_path": "https://image.tmdb.org/t/p/w1280/9zcbqSxdsRMZWHYtyCd1nXPr2xq.jpg",
@@ -120,7 +184,7 @@ export const MOCK_MOVIES = [
     "vote_count": 11076,
     "release_date": "2019-11-12",
     "year": "2019",
-    "runtime": 45,
+    "runtime": 48,
     "genres": [
       "TV Series",
       "Drama"
@@ -132,8 +196,8 @@ export const MOCK_MOVIES = [
     ],
     "director": "Showrunner",
     "cast": [
-      "Lead Actor",
-      "Supporting Actor"
+      "Lead Cast",
+      "Ensemble Cast"
     ],
     "youtube_trailer_id": null,
     "featured": false,
@@ -144,7 +208,7 @@ export const MOCK_MOVIES = [
     "id": 984958,
     "title": "Loki",
     "original_title": "Loki",
-    "tagline": "Popular TV Series",
+    "tagline": "Acclaimed TV Series",
     "overview": "After stealing the Tesseract during the events of “Avengers: Endgame,” an alternate version of Loki is brought to the mysterious Time Variance Authority, a bureaucratic organization that exists outside of time and space and monitors the timeline. They give Loki a choice: face being erased from existence due to being a “time variant” or help fix the timeline and stop a greater threat.",
     "poster_path": "https://image.tmdb.org/t/p/w500/rX1wQMTKFqF0gvZyS0DDQqgnQPB.jpg",
     "backdrop_path": "https://image.tmdb.org/t/p/w1280/q3jHCb4dMfYF6ojikKuHd6LscxC.jpg",
@@ -152,7 +216,7 @@ export const MOCK_MOVIES = [
     "vote_count": 12515,
     "release_date": "2021-06-09",
     "year": "2021",
-    "runtime": 45,
+    "runtime": 48,
     "genres": [
       "TV Series",
       "Drama"
@@ -164,8 +228,8 @@ export const MOCK_MOVIES = [
     ],
     "director": "Showrunner",
     "cast": [
-      "Lead Actor",
-      "Supporting Actor"
+      "Lead Cast",
+      "Ensemble Cast"
     ],
     "youtube_trailer_id": null,
     "featured": false,
@@ -176,7 +240,7 @@ export const MOCK_MOVIES = [
     "id": 919885,
     "title": "Sherlock",
     "original_title": "Sherlock",
-    "tagline": "Popular TV Series",
+    "tagline": "Acclaimed TV Series",
     "overview": "A modern update finds the famous sleuth and his doctor partner solving crime in 21st century London.",
     "poster_path": "https://image.tmdb.org/t/p/w500/7WTsnHkbA0FaG6R9twfFde0I9hl.jpg",
     "backdrop_path": "https://image.tmdb.org/t/p/w1280/8rvLEmdI4gLrMO1rLqbNdnNcPFE.jpg",
@@ -184,7 +248,7 @@ export const MOCK_MOVIES = [
     "vote_count": 6535,
     "release_date": "2010-07-25",
     "year": "2010",
-    "runtime": 45,
+    "runtime": 48,
     "genres": [
       "TV Series",
       "Drama"
@@ -196,8 +260,8 @@ export const MOCK_MOVIES = [
     ],
     "director": "Showrunner",
     "cast": [
-      "Lead Actor",
-      "Supporting Actor"
+      "Lead Cast",
+      "Ensemble Cast"
     ],
     "youtube_trailer_id": null,
     "featured": false,
@@ -208,7 +272,7 @@ export const MOCK_MOVIES = [
     "id": 982452,
     "title": "Avatar: The Last Airbender",
     "original_title": "Avatar: The Last Airbender",
-    "tagline": "Popular TV Series",
+    "tagline": "Acclaimed TV Series",
     "overview": "A young boy known as the Avatar must master the four elemental powers to save a world at war — and fight a ruthless enemy bent on stopping him.",
     "poster_path": "https://image.tmdb.org/t/p/w500/lzZpWEaqzP0qVA5nkCc5ASbNcSy.jpg",
     "backdrop_path": "https://image.tmdb.org/t/p/w1280/aVvRQJ2Ckhlym4uh0YGc166CUoP.jpg",
@@ -216,7 +280,7 @@ export const MOCK_MOVIES = [
     "vote_count": 1278,
     "release_date": "2024-02-22",
     "year": "2024",
-    "runtime": 45,
+    "runtime": 48,
     "genres": [
       "TV Series",
       "Drama"
@@ -228,8 +292,8 @@ export const MOCK_MOVIES = [
     ],
     "director": "Showrunner",
     "cast": [
-      "Lead Actor",
-      "Supporting Actor"
+      "Lead Cast",
+      "Ensemble Cast"
     ],
     "youtube_trailer_id": null,
     "featured": false,
@@ -240,7 +304,7 @@ export const MOCK_MOVIES = [
     "id": 994605,
     "title": "Arcane",
     "original_title": "Arcane",
-    "tagline": "Popular TV Series",
+    "tagline": "Acclaimed TV Series",
     "overview": "Amid the stark discord of twin cities Piltover and Zaun, two sisters fight on rival sides of a war between magic technologies and clashing convictions.",
     "poster_path": "https://image.tmdb.org/t/p/w500/abf8tHznhSvl9BAElD2cQeRr7do.jpg",
     "backdrop_path": "https://image.tmdb.org/t/p/w1280/q8eejQcg1bAqImEV8jh8RtBD4uH.jpg",
@@ -248,7 +312,7 @@ export const MOCK_MOVIES = [
     "vote_count": 6043,
     "release_date": "2021-11-06",
     "year": "2021",
-    "runtime": 45,
+    "runtime": 48,
     "genres": [
       "TV Series",
       "Drama"
@@ -260,8 +324,8 @@ export const MOCK_MOVIES = [
     ],
     "director": "Showrunner",
     "cast": [
-      "Lead Actor",
-      "Supporting Actor"
+      "Lead Cast",
+      "Ensemble Cast"
     ],
     "youtube_trailer_id": null,
     "featured": false,
@@ -272,7 +336,7 @@ export const MOCK_MOVIES = [
     "id": 995396,
     "title": "Severance",
     "original_title": "Severance",
-    "tagline": "Popular TV Series",
+    "tagline": "Acclaimed TV Series",
     "overview": "Mark leads a team of office workers whose memories have been surgically divided between their work and personal lives. When a mysterious colleague appears outside of work, it begins a journey to discover the truth about their jobs.",
     "poster_path": "https://image.tmdb.org/t/p/w500/pPHpeI2X1qEd1CS1SeyrdhZ4qnT.jpg",
     "backdrop_path": "https://image.tmdb.org/t/p/w1280/ixgFmf1X59PUZam2qbAfskx2gQr.jpg",
@@ -280,7 +344,7 @@ export const MOCK_MOVIES = [
     "vote_count": 2780,
     "release_date": "2022-02-17",
     "year": "2022",
-    "runtime": 45,
+    "runtime": 48,
     "genres": [
       "TV Series",
       "Drama"
@@ -292,8 +356,8 @@ export const MOCK_MOVIES = [
     ],
     "director": "Showrunner",
     "cast": [
-      "Lead Actor",
-      "Supporting Actor"
+      "Lead Cast",
+      "Ensemble Cast"
     ],
     "youtube_trailer_id": null,
     "featured": false,
@@ -304,7 +368,7 @@ export const MOCK_MOVIES = [
     "id": 976331,
     "title": "Succession",
     "original_title": "Succession",
-    "tagline": "Popular TV Series",
+    "tagline": "Acclaimed TV Series",
     "overview": "Follow the lives of the Roy family as they contemplate their future once their aging father begins to step back from the media and entertainment conglomerate they control.",
     "poster_path": "https://image.tmdb.org/t/p/w500/z0XiwdrCQ9yVIr4O0pxzaAYRxdW.jpg",
     "backdrop_path": "https://image.tmdb.org/t/p/w1280/bcdUYUFk8GdpZJPiSAas9UeocLH.jpg",
@@ -312,7 +376,7 @@ export const MOCK_MOVIES = [
     "vote_count": 1697,
     "release_date": "2018-06-03",
     "year": "2018",
-    "runtime": 45,
+    "runtime": 48,
     "genres": [
       "TV Series",
       "Drama"
@@ -324,8 +388,8 @@ export const MOCK_MOVIES = [
     ],
     "director": "Showrunner",
     "cast": [
-      "Lead Actor",
-      "Supporting Actor"
+      "Lead Cast",
+      "Ensemble Cast"
     ],
     "youtube_trailer_id": null,
     "featured": false,
@@ -336,7 +400,7 @@ export const MOCK_MOVIES = [
     "id": 1019051,
     "title": "Wednesday",
     "original_title": "Wednesday",
-    "tagline": "Popular TV Series",
+    "tagline": "Acclaimed TV Series",
     "overview": "Smart, sarcastic and a little dead inside, Wednesday Addams investigates twisted mysteries while making new friends — and foes — at Nevermore Academy.",
     "poster_path": "https://image.tmdb.org/t/p/w500/36xXlhEpQqVVPuiZhfoQuaY4OlA.jpg",
     "backdrop_path": "https://image.tmdb.org/t/p/w1280/iHSwvRVsRyxpX7FE7GbviaDvgGZ.jpg",
@@ -344,7 +408,7 @@ export const MOCK_MOVIES = [
     "vote_count": 10669,
     "release_date": "2022-11-23",
     "year": "2022",
-    "runtime": 45,
+    "runtime": 48,
     "genres": [
       "TV Series",
       "Drama"
@@ -356,8 +420,8 @@ export const MOCK_MOVIES = [
     ],
     "director": "Showrunner",
     "cast": [
-      "Lead Actor",
-      "Supporting Actor"
+      "Lead Cast",
+      "Ensemble Cast"
     ],
     "youtube_trailer_id": null,
     "featured": false,
@@ -368,7 +432,7 @@ export const MOCK_MOVIES = [
     "id": 902316,
     "title": "The Office",
     "original_title": "The Office",
-    "tagline": "Popular TV Series",
+    "tagline": "Acclaimed TV Series",
     "overview": "The everyday lives of office employees in the Scranton, Pennsylvania branch of the fictional Dunder Mifflin Paper Company.",
     "poster_path": "https://image.tmdb.org/t/p/w500/7DJKHzAi83BmQrWLrYYOqcoKfhR.jpg",
     "backdrop_path": "https://image.tmdb.org/t/p/w1280/mLyW3UTgi2lsMdtueYODcfAB9Ku.jpg",
@@ -376,7 +440,7 @@ export const MOCK_MOVIES = [
     "vote_count": 5317,
     "release_date": "2005-03-24",
     "year": "2005",
-    "runtime": 45,
+    "runtime": 48,
     "genres": [
       "TV Series",
       "Drama"
@@ -388,8 +452,1224 @@ export const MOCK_MOVIES = [
     ],
     "director": "Showrunner",
     "cast": [
-      "Lead Actor",
-      "Supporting Actor"
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 960059,
+    "title": "Better Call Saul",
+    "original_title": "Better Call Saul",
+    "tagline": "Acclaimed TV Series",
+    "overview": "Six years before Saul Goodman meets Walter White. We meet him when the man who will become Saul Goodman is known as Jimmy McGill, a small-time lawyer searching for his destiny, and, more immediately, hustling to make ends meet. Working alongside, and, often, against Jimmy, is “fixer” Mike Ehrmantraut. The series tracks Jimmy’s transformation into Saul Goodman, the man who puts “criminal” in “criminal lawyer\".",
+    "poster_path": "https://image.tmdb.org/t/p/w500/zjg4jpK1Wp2kiRvtt5ND0kznako.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/rfxryDIv8huejujg4JueDJx8zCz.jpg",
+    "vote_average": 8.7,
+    "vote_count": 6667,
+    "release_date": "2015-02-08",
+    "year": "2015",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 901438,
+    "title": "The Wire",
+    "original_title": "The Wire",
+    "tagline": "Acclaimed TV Series",
+    "overview": "Told from the points of view of both the Baltimore homicide and narcotics detectives and their targets, the series captures a universe in which the national war on drugs has become a permanent, self-sustaining bureaucracy, and distinctions between good and evil are routinely obliterated.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/4lbclFySvugI51fwsyxBTOm4DqK.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/layPSOJGckJv3PXZDIVluMq69mn.jpg",
+    "vote_average": 8.6,
+    "vote_count": 2740,
+    "release_date": "2002-06-02",
+    "year": "2002",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 901398,
+    "title": "The Sopranos",
+    "original_title": "The Sopranos",
+    "tagline": "Acclaimed TV Series",
+    "overview": "The story of New Jersey-based Italian-American mobster Tony Soprano and the difficulties he faces as he tries to balance the conflicting requirements of his home life and the criminal organization he heads. Those difficulties are often highlighted through his ongoing professional relationship with psychiatrist Jennifer Melfi. The show features Tony's family members and Mafia associates in prominent roles and story arcs, most notably his wife Carmela and his cousin and protégé Christopher Moltisanti.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/rTc7ZXdroqjkKivFPvCPX0Ru7uw.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/lNpkvX2s8LGB0mjGODMT4o6Up7j.jpg",
+    "vote_average": 8.7,
+    "vote_count": 3562,
+    "release_date": "1999-01-10",
+    "year": "1999",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 960574,
+    "title": "Peaky Blinders",
+    "original_title": "Peaky Blinders",
+    "tagline": "Acclaimed TV Series",
+    "overview": "A gangster family epic set in 1919 Birmingham, England and centered on a gang who sew razor blades in the peaks of their caps, and their fierce boss Tommy Shelby, who means to move up in the world.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/dzq83RHwQcnP6WGJ6YkenIqeaa5.jpg",
+    "vote_average": 8.5,
+    "vote_count": 11229,
+    "release_date": "2013-09-12",
+    "year": "2013",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 987108,
+    "title": "Chernobyl",
+    "original_title": "Chernobyl",
+    "tagline": "Acclaimed TV Series",
+    "overview": "The true story of one of the worst man-made catastrophes in history: the catastrophic nuclear accident at Chernobyl. A tale of the brave men and women who sacrificed to save Europe from unimaginable disaster.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/3URK0z9PzpVNJrGE7XOuyy6KFzk.jpg",
+    "vote_average": 8.7,
+    "vote_count": 8065,
+    "release_date": "2019-05-06",
+    "year": "2019",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 963351,
+    "title": "Narcos",
+    "original_title": "Narcos",
+    "tagline": "Acclaimed TV Series",
+    "overview": "A gritty chronicle of the war against Colombia's infamously violent and powerful drug cartels.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/rTmal9fDbwh5F0waol2hq35U4ah.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/y9ekzkPFmWSqUU3Kj0wHmYUM8qu.jpg",
+    "vote_average": 8.1,
+    "vote_count": 3357,
+    "release_date": "2015-08-28",
+    "year": "2015",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 969740,
+    "title": "Ozark",
+    "original_title": "Ozark",
+    "tagline": "Acclaimed TV Series",
+    "overview": "A financial adviser drags his family from Chicago to the Missouri Ozarks, where he must launder $500 million in five years to appease a drug boss.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/pCGyPVrI9Fzw6rE1Pvi4BIXF6ET.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/aatG9iVAUL7U7OyFEmupESpOrD2.jpg",
+    "vote_average": 8.2,
+    "vote_count": 2831,
+    "release_date": "2017-07-21",
+    "year": "2017",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 967744,
+    "title": "MINDHUNTER",
+    "original_title": "MINDHUNTER",
+    "tagline": "Acclaimed TV Series",
+    "overview": "An agent in the FBI's Elite Serial Crime Unit develops profiling techniques as he pursues notorious serial killers and rapists.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/fbKE87mojpIETWepSbD5Qt741fp.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/lpDVJuIro21gtMj9iXMFKHuroZN.jpg",
+    "vote_average": 8.1,
+    "vote_count": 3025,
+    "release_date": "2017-10-13",
+    "year": "2017",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 960622,
+    "title": "Fargo",
+    "original_title": "Fargo",
+    "tagline": "Acclaimed TV Series",
+    "overview": "A close-knit anthology series dealing with stories involving malice, violence and murder based in and around Minnesota.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/a3VW6khsyUVKrG0GBCWFG3NzWPX.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/4jrSbRpLqpvYJtLKncaxZVC47EW.jpg",
+    "vote_average": 8.3,
+    "vote_count": 3331,
+    "release_date": "2014-04-15",
+    "year": "2014",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 946648,
+    "title": "True Detective",
+    "original_title": "True Detective",
+    "tagline": "Acclaimed TV Series",
+    "overview": "An American anthology police detective series utilizing multiple timelines in which investigations seem to unearth personal and professional secrets of those involved, both within or outside the law.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/dC7jkj2g1aU8sxKqM6D4g44xA6w.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/v8YFr8BbU9qsO8PYIulzTeM6Qk.jpg",
+    "vote_average": 8.3,
+    "vote_count": 4229,
+    "release_date": "2014-01-12",
+    "year": "2014",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 901405,
+    "title": "Dexter",
+    "original_title": "Dexter",
+    "tagline": "Acclaimed TV Series",
+    "overview": "Dexter Morgan, a blood spatter pattern analyst for the Miami Metro Police also leads a secret life as a serial killer, hunting down criminals who have slipped through the cracks of justice.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/q8dWfc4JwQuv3HayIZeO84jAXED.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/aSGSxGMTP893DPMCvMl9AdnEICE.jpg",
+    "vote_average": 8.2,
+    "vote_count": 5678,
+    "release_date": "2006-10-01",
+    "year": "2006",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 902288,
+    "title": "Prison Break",
+    "original_title": "Prison Break",
+    "tagline": "Acclaimed TV Series",
+    "overview": "Due to a political conspiracy, an innocent man is sent to death row and his only hope is his brother, who makes it his mission to deliberately get himself sent to the same prison in order to break the both of them out, from the inside out.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/wnmNPaLvhnMeOqnWlhNkYCZxtda.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/n3Brk7roueE9HOwVmYlJx5j462g.jpg",
+    "vote_average": 8.1,
+    "vote_count": 6046,
+    "release_date": "2005-08-29",
+    "year": "2005",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 1028904,
+    "title": "Dark Winds",
+    "original_title": "Dark Winds",
+    "tagline": "Acclaimed TV Series",
+    "overview": "This psychological thriller follows two Navajo police officers, Leaphorn and Chee, in the 1970s Southwest as their search for clues in a grisly double murder case forces them to challenge their own spiritual beliefs and come to terms with the trauma of their pasts.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/kDlrMN0P9ByrEH2GoRbBFeZHbcf.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/uNvpN37f9HbvsDBQFhHU5m2EnVo.jpg",
+    "vote_average": 7.5,
+    "vote_count": 199,
+    "release_date": "2022-06-12",
+    "year": "2022",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 942009,
+    "title": "Black Mirror",
+    "original_title": "Black Mirror",
+    "tagline": "Acclaimed TV Series",
+    "overview": "Twisted tales run wild in this mind-bending anthology series that reveals humanity's worst traits, greatest innovations and more.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/dg3OindVAGZBjlT3xYKqIAdukPL.jpg",
+    "vote_average": 8.3,
+    "vote_count": 6332,
+    "release_date": "2011-12-04",
+    "year": "2011",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 963247,
+    "title": "Westworld",
+    "original_title": "Westworld",
+    "tagline": "Acclaimed TV Series",
+    "overview": "A dark odyssey about the dawn of artificial consciousness and the evolution of sin. Set at the intersection of the near future and the reimagined past, it explores a world in which every human appetite, no matter how noble or depraved, can be indulged.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/ALlSU9du9iRiKIIoY1sREGNqQ5.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/rX5hvSRB2k4YoIvRg6Zky52rWk0.jpg",
+    "vote_average": 8,
+    "vote_count": 6263,
+    "release_date": "2016-10-02",
+    "year": "2016",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 976479,
+    "title": "The Boys",
+    "original_title": "The Boys",
+    "tagline": "Acclaimed TV Series",
+    "overview": "A group of vigilantes known informally as “The Boys” set out to take down corrupt superheroes with no more than blue-collar grit and a willingness to fight dirty.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/in1R2dDc421JxsoRWaIIAqVI2KE.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/n6vVs6z8obNbExdD3QHTr4Utu1Z.jpg",
+    "vote_average": 8.4,
+    "vote_count": 13170,
+    "release_date": "2019-07-25",
+    "year": "2019",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 960625,
+    "title": "Rick and Morty",
+    "original_title": "Rick and Morty",
+    "tagline": "Acclaimed TV Series",
+    "overview": "Follows a sociopathic genius scientist who drags his inherently timid grandson on adventures across the universe.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/owhkU6KRqdXoUQpjV8uyZGPtX58.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/5BDNWWHweQL0q1fmTv7gmRXfnl4.jpg",
+    "vote_average": 8.7,
+    "vote_count": 11155,
+    "release_date": "2013-12-02",
+    "year": "2013",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 971912,
+    "title": "The Witcher",
+    "original_title": "The Witcher",
+    "tagline": "Acclaimed TV Series",
+    "overview": "Geralt of Rivia, a mutated monster-hunter for hire, journeys toward his destiny in a turbulent world where people often prove more wicked than beasts.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/AoGsDM02UVt0npBA8OvpDcZbaMi.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/foGkPxpw9h8zln81j63mix5B7m8.jpg",
+    "vote_average": 7.9,
+    "vote_count": 6793,
+    "release_date": "2019-12-20",
+    "year": "2019",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 1102555,
+    "title": "Daredevil: Born Again",
+    "original_title": "Daredevil: Born Again",
+    "tagline": "Acclaimed TV Series",
+    "overview": "Matt Murdock, a blind lawyer with heightened abilities, is fighting for justice through his bustling law firm, while former mob boss Wilson Fisk pursues his own political endeavors in New York. When their past identities begin to emerge, both men find themselves on an inevitable collision course.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/xDUoAsU8lQHOOoRkFiBuarmACDN.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/m291MEBjhuRqb0nh9ojnm9gzScq.jpg",
+    "vote_average": 8.2,
+    "vote_count": 1021,
+    "release_date": "2025-03-04",
+    "year": "2025",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 901668,
+    "title": "Friends",
+    "original_title": "Friends",
+    "tagline": "Acclaimed TV Series",
+    "overview": "Six young people from New York City, on their own and struggling to survive in the real world, find the companionship, comfort and support they get from each other to be the perfect antidote to the pressures of life.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/2koX1xLkpTQM4IZebYvKysFW1Nh.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/l0qVZIpXtIo7km9u5Yqh0nKPOr5.jpg",
+    "vote_average": 8.4,
+    "vote_count": 9228,
+    "release_date": "1994-09-22",
+    "year": "1994",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 908592,
+    "title": "Parks and Recreation",
+    "original_title": "Parks and Recreation",
+    "tagline": "Acclaimed TV Series",
+    "overview": "In an attempt to beautify her town — and advance her career — Leslie Knope, a mid-level bureaucrat in the Parks and Recreation Department of Pawnee, Indiana, takes on bureaucrats, cranky neighbors, and single-issue fanatics whose weapons are lawsuits, the jumble of city codes, and the democratic process she loves so much.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/5IOj62y2Eb2ngyYmEn1IJ7bFhzH.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/frwl2zBNAl5ZbFDJGoJv0mYo0rF.jpg",
+    "vote_average": 8,
+    "vote_count": 1861,
+    "release_date": "2009-04-09",
+    "year": "2009",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 948891,
+    "title": "Brooklyn Nine-Nine",
+    "original_title": "Brooklyn Nine-Nine",
+    "tagline": "Acclaimed TV Series",
+    "overview": "A single-camera ensemble comedy following the lives of an eclectic group of detectives in a New York precinct, including one slacker who is forced to shape up when he gets a new boss.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/mpjlDzVjp7oyHUe2LaF9ltKe6f1.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/9AeiA1XtP5sel2tAf9LaGeUjhDb.jpg",
+    "vote_average": 8.2,
+    "vote_count": 4040,
+    "release_date": "2013-09-17",
+    "year": "2013",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 997546,
+    "title": "Ted Lasso",
+    "original_title": "Ted Lasso",
+    "tagline": "Acclaimed TV Series",
+    "overview": "Ted Lasso, an American football coach, moves to England when he's hired to manage a soccer team—despite having no experience. With cynical players and a doubtful town, will he get them to see the Ted Lasso Way?",
+    "poster_path": "https://image.tmdb.org/t/p/w500/5fhZdwP1DVJ0FyVH6vrFdHwpXIn.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/gEQkOMmnJcoh9Hh1vk7fpVYnksR.jpg",
+    "vote_average": 8.3,
+    "vote_count": 2446,
+    "release_date": "2020-08-14",
+    "year": "2020",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 967070,
+    "title": "Fleabag",
+    "original_title": "Fleabag",
+    "tagline": "Acclaimed TV Series",
+    "overview": "A portrait into the mind of a dry-witted, sexual, angry, porn-watching, grief-riddled woman, trying to make sense of the world. As she hurls herself headlong at modern living, Fleabag is thrown roughly up against the walls of contemporary London, with all its frenetic energy, late nights, and bright lights.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/27vEYsRKa3eAniwmoccOoluEXQ1.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/hXdQ4MWsEOX6qg6VydKrLb3YJ4g.jpg",
+    "vote_average": 8.3,
+    "vote_count": 1871,
+    "release_date": "2016-07-21",
+    "year": "2016",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 901418,
+    "title": "The Big Bang Theory",
+    "original_title": "The Big Bang Theory",
+    "tagline": "Acclaimed TV Series",
+    "overview": "Physicists Leonard and Sheldon find their nerd-centric social circle with pals Howard and Raj expanding when aspiring actress Penny moves in next door.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/euKFiO5M125rpngFRBbSW83beeI.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/rwYvhVv0vwbulMwxOfEsuAr1JrT.jpg",
+    "vote_average": 7.9,
+    "vote_count": 12610,
+    "release_date": "2007-09-24",
+    "year": "2007",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 901421,
+    "title": "Modern Family",
+    "original_title": "Modern Family",
+    "tagline": "Acclaimed TV Series",
+    "overview": "The Pritchett-Dunphy-Tucker clan is a wonderfully large and blended family. They give us an honest and often hilarious look into the sometimes warm, sometimes twisted, embrace of the modern family.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/k5Qg5rgPoKdh3yTJJrLtyoyYGwC.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/nO7EzksrBzlNpAg5rgv8HzaBIkx.jpg",
+    "vote_average": 7.9,
+    "vote_count": 3436,
+    "release_date": "2009-09-23",
+    "year": "2009",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 901429,
+    "title": "Attack on Titan",
+    "original_title": "進撃の巨人",
+    "tagline": "Acclaimed TV Series",
+    "overview": "100 years ago, the last remnants of humanity were forced to retreat behind the towering walls of a fortified city to escape the massive, man-eating Titans that roamed the land outside their fortress. Only the members of the Scouting Legion dared to stray beyond the safety of the walls – but even those brave warriors seldom returned alive. Those within the city clung to the illusion of a peaceful existence until the day that dream was shattered, and their slim chance at survival was reduced to one horrifying choice: kill – or be devoured!",
+    "poster_path": "https://image.tmdb.org/t/p/w500/hTP1DtLGFamjfu8WqjnuQdP1n4i.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/rqbCbjB19amtOtFQbb3K2lgm2zv.jpg",
+    "vote_average": 8.7,
+    "vote_count": 7571,
+    "release_date": "2013-04-07",
+    "year": "2013",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 985937,
+    "title": "Demon Slayer: Kimetsu no Yaiba",
+    "original_title": "鬼滅の刃",
+    "tagline": "Acclaimed TV Series",
+    "overview": "After a demon attack leaves his family slain and his sister cursed, Tanjiro embarks upon a perilous journey to find a cure and avenge those he's lost.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/xUfRZu2mi8jH6SzQEJGP6tjBuYj.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/3GQKYh6Trm8pxd2AypovoYQf4Ay.jpg",
+    "vote_average": 8.6,
+    "vote_count": 7363,
+    "release_date": "2019-04-06",
+    "year": "2019",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 995557,
+    "title": "INVINCIBLE",
+    "original_title": "INVINCIBLE",
+    "tagline": "Acclaimed TV Series",
+    "overview": "Mark Grayson is a normal teenager except for the fact that his father is the most powerful superhero on the planet. Shortly after his seventeenth birthday, Mark begins to develop powers of his own and enters into his father's tutelage.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/4tblBrslcKSifMVZ3TmtT2ukMor.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/9qrroces8C6R9aKr08hACNPVXdZ.jpg",
+    "vote_average": 8.6,
+    "vote_count": 5957,
+    "release_date": "2021-03-25",
+    "year": "2021",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 913916,
+    "title": "Death Note",
+    "original_title": "DEATH NOTE",
+    "tagline": "Acclaimed TV Series",
+    "overview": "Light Yagami is an ace student with great prospects—and he’s bored out of his mind. But all that changes when he finds the Death Note, a notebook dropped by a rogue Shinigami death god. Any human whose name is written in the notebook dies, and Light has vowed to use the power of the Death Note to rid the world of evil. But will Light succeed in his noble goal, or will the Death Note turn him into the very thing he fights against?",
+    "poster_path": "https://image.tmdb.org/t/p/w500/tCZFfYTIwrR7n94J6G14Y4hAFU6.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/koBa94NxTaGe2FoDzlXMuJptsv0.jpg",
+    "vote_average": 8.6,
+    "vote_count": 5019,
+    "release_date": "2006-10-04",
+    "year": "2006",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 1005248,
+    "title": "Cyberpunk: Edgerunners",
+    "original_title": "Cyberpunk: Edgerunners",
+    "tagline": "Acclaimed TV Series",
+    "overview": "In a dystopia riddled with corruption and cybernetic implants, a talented but reckless street kid strives to become a mercenary outlaw — an edgerunner.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/lqcDVZ8pyk08AVftMBildDR3QUK.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/bRE6zX4iOAejLOQCHryoV5WNu8G.jpg",
+    "vote_average": 8.5,
+    "vote_count": 1891,
+    "release_date": "2022-09-13",
+    "year": "2022",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 993405,
+    "title": "Squid Game",
+    "original_title": "오징어 게임",
+    "tagline": "Acclaimed TV Series",
+    "overview": "Hundreds of cash-strapped players accept a strange invitation to compete in children's games. Inside, a tempting prize awaits — with deadly high stakes.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/1QdXdRYfktUSONkl1oD5gc6Be0s.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/2meX1nMdScFOoV4370rqHWKmXhY.jpg",
+    "vote_average": 7.9,
+    "vote_count": 17576,
+    "release_date": "2021-09-17",
+    "year": "2021",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 971446,
+    "title": "Money Heist",
+    "original_title": "La casa de papel",
+    "tagline": "Acclaimed TV Series",
+    "overview": "To carry out the biggest heist in history, a mysterious man called The Professor recruits a band of eight robbers who have a single characteristic: none of them has anything to lose. Five months of seclusion - memorizing every step, every detail, every probability - culminate in eleven days locked up in the National Coinage and Stamp Factory of Spain, surrounded by police forces and with dozens of hostages in their power, to find out whether their suicide wager will lead to everything or nothing.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/gFZriCkpJYsApPZEF3jhxL4yLzG.jpg",
+    "vote_average": 8.2,
+    "vote_count": 19561,
+    "release_date": "2017-05-02",
+    "year": "2017",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 1017488,
+    "title": "Yellowjackets",
+    "original_title": "Yellowjackets",
+    "tagline": "Acclaimed TV Series",
+    "overview": "This equal parts survival epic, psychological horror story and coming-of-age drama tells the saga of a team of wildly talented high school girls soccer players who become the (un)lucky survivors of a plane crash deep in the remote northern wilderness. The series chronicles their descent from a complicated but thriving team to savage clans, while also tracking the lives they’ve attempted to piece back together nearly 25 years later.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/xRnGrn7Z7SC0KIBodocoU1QgDZF.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/ibFWJDWS8cTO6s2vZVd2uKDm8p.jpg",
+    "vote_average": 7.4,
+    "vote_count": 992,
+    "release_date": "2021-11-14",
+    "year": "2021",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 1008978,
+    "title": "Reacher",
+    "original_title": "Reacher",
+    "tagline": "Acclaimed TV Series",
+    "overview": "Jack Reacher, a veteran military police investigator, has just recently entered civilian life. Reacher is a drifter, carrying no phone and the barest of essentials as he travels the country and explores the nation he once served.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/31GlRQMiDunO8cl3NxTz34U64rf.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/voKEhzb4ExOmR0WSvQgLTTqRUEu.jpg",
+    "vote_average": 8.1,
+    "vote_count": 2949,
+    "release_date": "2022-02-03",
+    "year": "2022",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 1036315,
+    "title": "The Bear",
+    "original_title": "The Bear",
+    "tagline": "Acclaimed TV Series",
+    "overview": "Carmy, a young fine-dining chef, comes home to Chicago to run his family sandwich shop. As he fights to transform the shop and himself, he works alongside a rough-around-the-edges crew that ultimately reveal themselves as his chosen family.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/eKfVzzEazSIjJMrw9ADa2x8ksLz.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/aJtG4txtmiRHwAAqENQHZvBs6kY.jpg",
+    "vote_average": 8.1,
+    "vote_count": 1836,
+    "release_date": "2022-06-23",
+    "year": "2022",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 1026308,
+    "title": "Shōgun",
+    "original_title": "Shōgun",
+    "tagline": "Acclaimed TV Series",
+    "overview": "In Japan in the year 1600, at the dawn of a century-defining civil war, Lord Yoshii Toranaga is fighting for his life as his enemies on the Council of Regents unite against him, when a mysterious European ship is found marooned in a nearby fishing village.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/7O4iVfOMQmdCSxhOg1WnzG1AgYT.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/bwSmgmd90hCWwqOKQYTEraeOZhJ.jpg",
+    "vote_average": 8.4,
+    "vote_count": 1812,
+    "release_date": "2024-02-27",
+    "year": "2024",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true
+  },
+  {
+    "id": 965494,
+    "title": "The Crown",
+    "original_title": "The Crown",
+    "tagline": "Acclaimed TV Series",
+    "overview": "The gripping, decades-spanning inside story of Her Majesty Queen Elizabeth II and the Prime Ministers who shaped Britain's post-war destiny. \n\nThe Crown tells the inside story of two of the most famous addresses in the world – Buckingham Palace and 10 Downing Street – and the intrigues, love lives and machinations behind the great events that shaped the second half of the 20th century. Two houses, two courts, one Crown.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/1M876KPjulVwppEpldhdc8V4o68.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/8VXhcrl5z2I1zEU9X3pkkNrZlD.jpg",
+    "vote_average": 8.2,
+    "vote_count": 2376,
+    "release_date": "2016-11-04",
+    "year": "2016",
+    "runtime": 48,
+    "genres": [
+      "TV Series",
+      "Drama"
+    ],
+    "genre_ids": [
+      "series",
+      "tv series",
+      "drama"
+    ],
+    "director": "Showrunner",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
     ],
     "youtube_trailer_id": null,
     "featured": false,
