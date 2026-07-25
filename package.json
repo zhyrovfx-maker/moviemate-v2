@@ -1,0 +1,22 @@
+{
+  "name": "moviemate-v2",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "MovieMate v2 — Open Source Movie Discovery, Recommendation & Watchlist Platform",
+  "scripts": {
+    "dev": "vite --port 3001",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.1"
+  }
+}

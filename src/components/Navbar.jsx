@@ -1,0 +1,156 @@
+import React from 'react';
+
+export default function Navbar({ 
+  currentView, 
+  setCurrentView, 
+  searchQuery, 
+  setSearchQuery, 
+  watchlistCount, 
+  user, 
+  onOpenAuth, 
+  onLogout 
+}) {
+  return (
+    <header className="navbar">
+      <div className="navbar-container">
+        {/* Brand Logo */}
+        <div 
+          className="brand-logo" 
+          onClick={() => setCurrentView('discover')}
+        >
+          <div className="brand-icon">
+            <i className="fa-solid fa-film" />
+          </div>
+          <span className="brand-text">Movie<span>Mate</span></span>
+          <span className="brand-badge">v2</span>
+        </div>
+
+        {/* Search Bar */}
+        <div className="search-container">
+          <i className="fa-solid fa-magnifying-glass search-icon" />
+          <input
+            type="text"
+            className="search-input"
+            placeholder="Search TMDB movies, actors, directors..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+          {searchQuery && (
+            <button 
+              onClick={() => setSearchQuery('')}
+              style={{
+                position: 'absolute',
+                right: '1rem',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                background: 'none',
+                border: 'none',
+                color: '#94a3b8',
+                cursor: 'pointer',
+                fontSize: '1rem'
+              }}
+            >
+              <i className="fa-solid fa-xmark" />
+            </button>
+          )}
+        </div>
+
+        {/* Navigation Action Buttons */}
+        <div className="nav-actions">
+          <button
+            className={`nav-link ${currentView === 'discover' ? 'active' : ''}`}
+            onClick={() => setCurrentView('discover')}
+          >
+            <i className="fa-solid fa-compass" />
+            <span>Discover</span>
+          </button>
+
+          <button
+            className={`nav-link ${currentView === 'watchlist' ? 'active' : ''}`}
+            onClick={() => setCurrentView('watchlist')}
+            style={{ position: 'relative' }}
+          >
+            <i className="fa-solid fa-bookmark" />
+            <span>Watchlist</span>
+            {watchlistCount > 0 && (
+              <span className="badge-count">
+                {watchlistCount}
+              </span>
+            )}
+          </button>
+
+          <button
+            className={`nav-link ${currentView === 'recommendations' ? 'active' : ''}`}
+            onClick={() => setCurrentView('recommendations')}
+          >
+            <i className="fa-solid fa-wand-magic-sparkles" />
+            <span>For You</span>
+          </button>
+
+          <button
+            className={`nav-link ${currentView === 'analytics' ? 'active' : ''}`}
+            onClick={() => setCurrentView('analytics')}
+          >
+            <i className="fa-solid fa-chart-pie" />
+            <span>Stats</span>
+          </button>
+
+          {/* Admin Dashboard Tab (if Admin User) */}
+          {user?.role === 'admin' && (
+            <button
+              className={`nav-link ${currentView === 'admin' ? 'active' : ''}`}
+              onClick={() => setCurrentView('admin')}
+              style={{
+                background: currentView === 'admin' ? 'linear-gradient(135deg, #ec4899, #8b5cf6)' : 'rgba(236, 72, 153, 0.15)',
+                color: currentView === 'admin' ? '#fff' : '#f472b6',
+                border: '1px solid rgba(236, 72, 153, 0.4)'
+              }}
+            >
+              <i className="fa-solid fa-user-shield" />
+              <span>Admin Panel</span>
+            </button>
+          )}
+
+          {/* User Auth Section */}
+          {user ? (
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginLeft: '0.5rem' }}>
+              <div style={{
+                background: 'rgba(99, 102, 241, 0.15)',
+                border: '1px solid rgba(99, 102, 241, 0.3)',
+                padding: '0.4rem 0.85rem',
+                borderRadius: '20px',
+                fontSize: '0.82rem',
+                fontWeight: 700,
+                color: '#818cf8',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px'
+              }}>
+                <i className={`fa-solid ${user.role === 'admin' ? 'fa-user-shield' : 'fa-user'}`} />
+                {user.name}
+              </div>
+
+              <button
+                className="nav-link icon-only"
+                onClick={onLogout}
+                title="Logout"
+                style={{ color: '#ef4444' }}
+              >
+                <i className="fa-solid fa-right-from-bracket" />
+              </button>
+            </div>
+          ) : (
+            <button
+              className="btn btn-primary"
+              onClick={onOpenAuth}
+              style={{ padding: '0.55rem 1.1rem', fontSize: '0.85rem', marginLeft: '0.5rem' }}
+            >
+              <i className="fa-solid fa-right-to-bracket" />
+              <span>Sign In</span>
+            </button>
+          )}
+        </div>
+      </div>
+    </header>
+  );
+}
