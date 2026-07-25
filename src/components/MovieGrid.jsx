@@ -15,16 +15,24 @@ export default function MovieGrid({
 }) {
   const watchlistIds = new Set(watchlist.map(item => item.id));
 
-  // Safe Family-Friendly Content Guard (Strictly excludes 18+ adult movies & posters)
+  // Strict Family-Friendly Guard (Excludes any adult, nudity, or explicit content)
   const isSafeContent = (movie) => {
     if (!movie) return false;
     if (movie.adult) return false;
-    const adultKeywords = ['adult', 'erotic', 'hentai', 'sex', 'nude', 'porn', 'strip', 'explicit', 'sensual', 'playboy'];
+    
+    const adultKeywords = [
+      'adult', 'erotic', 'hentai', 'sex', 'nude', 'nudity', 'porn', 
+      'strip', 'explicit', 'sensual', 'playboy', '50 shades', 'fifty shades', 
+      'euphoria', 'lust', 'passion', 'prostitute', 'brothel', 'stripper'
+    ];
+    
     const title = (movie.title || '').toLowerCase();
+    const overview = (movie.overview || '').toLowerCase();
     const genres = (movie.genres || []).map(g => g.toLowerCase());
     
     if (genres.some(g => adultKeywords.some(k => g.includes(k)))) return false;
     if (adultKeywords.some(k => title.includes(k))) return false;
+    if (adultKeywords.some(k => overview.includes(k))) return false;
     return true;
   };
 

@@ -207,38 +207,6 @@ export const MOCK_MOVIES = [
     "tag": "anime"
   },
   {
-    "id": 1068803,
-    "title": "Vinland Saga",
-    "original_title": "ヴィンランド・サガ",
-    "tagline": "Popular Global Production",
-    "overview": "For a thousand years, the Vikings have made quite a name and reputation for themselves as the strongest families with a thirst for violence. Thorfinn, the son of one of the Vikings' greatest warriors, spends his boyhood in a battlefield enhancing his skills in his adventure to redeem his most-desired revenge after his father was murdered.",
-    "poster_path": "https://image.tmdb.org/t/p/w500/vUHlpA5c1NXkds59reY3HMb4Abs.jpg",
-    "backdrop_path": "https://image.tmdb.org/t/p/w1280/pSLuy0OfN1QblifDVoEhAvst4et.jpg",
-    "vote_average": 8.5,
-    "vote_count": 975,
-    "release_date": "2019-07-08",
-    "year": "2019",
-    "runtime": 120,
-    "genres": [
-      "ANIME",
-      "TV Series"
-    ],
-    "genre_ids": [
-      "anime",
-      "series"
-    ],
-    "director": "Renowned Creator",
-    "cast": [
-      "Lead Cast",
-      "Ensemble Cast"
-    ],
-    "youtube_trailer_id": null,
-    "featured": false,
-    "trending": true,
-    "is_series": true,
-    "tag": "anime"
-  },
-  {
     "id": 1094410,
     "title": "Chainsaw Man",
     "original_title": "チェンソーマン",
@@ -1935,38 +1903,6 @@ export const MOCK_MOVIES = [
     "country": "Italy"
   },
   {
-    "id": 901396,
-    "title": "Breaking Bad",
-    "original_title": "Breaking Bad",
-    "tagline": "Acclaimed TV Series",
-    "overview": "Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.",
-    "poster_path": "https://image.tmdb.org/t/p/w500/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg",
-    "backdrop_path": "https://image.tmdb.org/t/p/w1280/tsRy63Mu5cu8etL1X7ZLyf7UP1M.jpg",
-    "vote_average": 8.9,
-    "vote_count": 18171,
-    "release_date": "2008-01-20",
-    "year": "2008",
-    "runtime": 48,
-    "genres": [
-      "TV Series",
-      "Drama"
-    ],
-    "genre_ids": [
-      "series",
-      "tv series",
-      "drama"
-    ],
-    "director": "Showrunner",
-    "cast": [
-      "Lead Cast",
-      "Ensemble Cast"
-    ],
-    "youtube_trailer_id": null,
-    "featured": false,
-    "trending": true,
-    "is_series": true
-  },
-  {
     "id": 966732,
     "title": "Stranger Things",
     "original_title": "Stranger Things",
@@ -2010,38 +1946,6 @@ export const MOCK_MOVIES = [
     "vote_count": 7168,
     "release_date": "2023-01-15",
     "year": "2023",
-    "runtime": 48,
-    "genres": [
-      "TV Series",
-      "Drama"
-    ],
-    "genre_ids": [
-      "series",
-      "tv series",
-      "drama"
-    ],
-    "director": "Showrunner",
-    "cast": [
-      "Lead Cast",
-      "Ensemble Cast"
-    ],
-    "youtube_trailer_id": null,
-    "featured": false,
-    "trending": true,
-    "is_series": true
-  },
-  {
-    "id": 901399,
-    "title": "Game of Thrones",
-    "original_title": "Game of Thrones",
-    "tagline": "Acclaimed TV Series",
-    "overview": "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.",
-    "poster_path": "https://image.tmdb.org/t/p/w500/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg",
-    "backdrop_path": "https://image.tmdb.org/t/p/w1280/2OMB0ynKlyIenMJWI2Dy9IWT4c.jpg",
-    "vote_average": 8.5,
-    "vote_count": 27318,
-    "release_date": "2011-04-17",
-    "year": "2011",
     "runtime": 48,
     "genres": [
       "TV Series",
@@ -3098,38 +3002,6 @@ export const MOCK_MOVIES = [
     "vote_count": 2446,
     "release_date": "2020-08-14",
     "year": "2020",
-    "runtime": 48,
-    "genres": [
-      "TV Series",
-      "Drama"
-    ],
-    "genre_ids": [
-      "series",
-      "tv series",
-      "drama"
-    ],
-    "director": "Showrunner",
-    "cast": [
-      "Lead Cast",
-      "Ensemble Cast"
-    ],
-    "youtube_trailer_id": null,
-    "featured": false,
-    "trending": true,
-    "is_series": true
-  },
-  {
-    "id": 967070,
-    "title": "Fleabag",
-    "original_title": "Fleabag",
-    "tagline": "Acclaimed TV Series",
-    "overview": "A portrait into the mind of a dry-witted, sexual, angry, porn-watching, grief-riddled woman, trying to make sense of the world. As she hurls herself headlong at modern living, Fleabag is thrown roughly up against the walls of contemporary London, with all its frenetic energy, late nights, and bright lights.",
-    "poster_path": "https://image.tmdb.org/t/p/w500/27vEYsRKa3eAniwmoccOoluEXQ1.jpg",
-    "backdrop_path": "https://image.tmdb.org/t/p/w1280/hXdQ4MWsEOX6qg6VydKrLb3YJ4g.jpg",
-    "vote_average": 8.3,
-    "vote_count": 1871,
-    "release_date": "2016-07-21",
-    "year": "2016",
     "runtime": 48,
     "genres": [
       "TV Series",
@@ -4479,36 +4351,6 @@ export const MOCK_MOVIES = [
     "trending": true
   },
   {
-    "id": 63883,
-    "title": "Drama/Mex",
-    "original_title": "Drama/Mex",
-    "tagline": "",
-    "overview": "Two stories unfold over the same long, hot day in Acapulco. The first involves Fernanda, who is forced to deal with the emergence of her ex-lover. Her boyfriend must compete with the sexual tension they share. The second concerns Jamie, a worker attempting suicide, until a girl disrupts his plan.",
-    "poster_path": "https://image.tmdb.org/t/p/w500/rIH6SOsb5iKkJO79LHT8e4AIMqb.jpg",
-    "backdrop_path": "https://image.tmdb.org/t/p/w1280/gD4BVaEAeAdpeC6b0olF01WrK9K.jpg",
-    "vote_average": 6,
-    "vote_count": 48,
-    "release_date": "2006-05-23",
-    "year": "2006",
-    "runtime": 148,
-    "genres": [
-      "Drama",
-      "Romance"
-    ],
-    "genre_ids": [
-      "drama",
-      "romance"
-    ],
-    "director": "Acclaimed Director",
-    "cast": [
-      "Lead Actor",
-      "Supporting Actor"
-    ],
-    "youtube_trailer_id": null,
-    "featured": false,
-    "trending": true
-  },
-  {
     "id": 1114107,
     "title": "Drama",
     "original_title": "ட்ராமா",
@@ -4969,42 +4811,6 @@ export const MOCK_MOVIES = [
     "trending": true
   },
   {
-    "id": 15018,
-    "title": "Thriller: A Cruel Picture",
-    "original_title": "Thriller - en grym film",
-    "tagline": "",
-    "overview": "Madeleine, rendered mute after being sexually assaulted as a youth, accepts a lift from a wealthy and sadistic pimp who soon enslaves her into his prostitution racket. Despite her limited means, Madeleine embarks on a bloody road to revenge against her captors.",
-    "poster_path": "https://image.tmdb.org/t/p/w500/pMYgdygJZ6oBpnC3dWrluevlZOt.jpg",
-    "backdrop_path": "https://image.tmdb.org/t/p/w1280/8YMq728a1ElZq6tmM0ZI3RrwoOi.jpg",
-    "vote_average": 6.3,
-    "vote_count": 218,
-    "release_date": "1973-05-01",
-    "year": "1973",
-    "runtime": 153,
-    "genres": [
-      "Action",
-      "Thriller",
-      "Crime",
-      "Horror",
-      "Drama"
-    ],
-    "genre_ids": [
-      "action",
-      "thriller",
-      "crime",
-      "horror",
-      "drama"
-    ],
-    "director": "Acclaimed Director",
-    "cast": [
-      "Lead Actor",
-      "Supporting Actor"
-    ],
-    "youtube_trailer_id": null,
-    "featured": false,
-    "trending": true
-  },
-  {
     "id": 1468927,
     "title": "Thriller",
     "original_title": "Thriller",
@@ -5268,34 +5074,6 @@ export const MOCK_MOVIES = [
     "genre_ids": [
       "comedy",
       "drama"
-    ],
-    "director": "Acclaimed Director",
-    "cast": [
-      "Lead Actor",
-      "Supporting Actor"
-    ],
-    "youtube_trailer_id": null,
-    "featured": false,
-    "trending": true
-  },
-  {
-    "id": 217666,
-    "title": "Hardcore Comedy",
-    "original_title": "重口味",
-    "tagline": "",
-    "overview": "3 stories, 3 surprises, magical love, crazy jokes, sexy hot stuff, car stunts, gangsters fights, all in one. The police are after Yao and Yan who later run into Peng. Three of them join the club. A bunch of gangsters want Peng, while the police want Yao and Yan. Meanwhile, Jay and Moon is going fast and furious in a car. They almost hit Peng... All of the characters end up in the same street at the same time. Yet they're all going to be responsible for their own karma.",
-    "poster_path": "https://image.tmdb.org/t/p/w500/sbcPe0gCS3YSkKfAIA5e4JzidOU.jpg",
-    "backdrop_path": "https://image.tmdb.org/t/p/w1280/dhjaxEWMBZvU4eys3YEHs9QXYN4.jpg",
-    "vote_average": 3.7,
-    "vote_count": 11,
-    "release_date": "2013-08-29",
-    "year": "2013",
-    "runtime": 121,
-    "genres": [
-      "Comedy"
-    ],
-    "genre_ids": [
-      "comedy"
     ],
     "director": "Acclaimed Director",
     "cast": [
@@ -6665,36 +6443,6 @@ export const MOCK_MOVIES = [
     "trending": true
   },
   {
-    "id": 364,
-    "title": "Batman Returns",
-    "original_title": "Batman Returns",
-    "tagline": "",
-    "overview": "The monstrous Penguin, who dwells in the sewers beneath Gotham, joins up with corrupt mayoral candidate Max Shreck to topple the Batman once and for all. But when Shreck's timid assistant Selina Kyle finds out, and Shreck tries to kill her, she's transformed into the sexy Catwoman. She teams up with the Penguin and Shreck to destroy Batman, but sparks fly unexpectedly when she confronts the caped crusader.",
-    "poster_path": "https://image.tmdb.org/t/p/w500/jKBjeXM7iBBV9UkUcOXx3m7FSHY.jpg",
-    "backdrop_path": "https://image.tmdb.org/t/p/w1280/7x4SNxO5HWArighxxFeet5sn3il.jpg",
-    "vote_average": 6.9,
-    "vote_count": 7162,
-    "release_date": "1992-06-19",
-    "year": "1992",
-    "runtime": 124,
-    "genres": [
-      "Action",
-      "Fantasy"
-    ],
-    "genre_ids": [
-      "action",
-      "fantasy"
-    ],
-    "director": "Acclaimed Director",
-    "cast": [
-      "Lead Actor",
-      "Supporting Actor"
-    ],
-    "youtube_trailer_id": null,
-    "featured": false,
-    "trending": true
-  },
-  {
     "id": 415,
     "title": "Batman & Robin",
     "original_title": "Batman & Robin",
@@ -7650,38 +7398,6 @@ export const MOCK_MOVIES = [
     ],
     "genre_ids": [
       "animation"
-    ],
-    "director": "Acclaimed Director",
-    "cast": [
-      "Lead Actor",
-      "Supporting Actor"
-    ],
-    "youtube_trailer_id": null,
-    "featured": false,
-    "trending": true
-  },
-  {
-    "id": 211387,
-    "title": "Marvel One-Shot: Agent Carter",
-    "original_title": "Marvel One-Shot: Agent Carter",
-    "tagline": "",
-    "overview": "Agent Peggy Carter is relegated to a desk job and frustrated at her male boss and comrades' sexist dismissal of her place in the SSR. Ordered to work late one night, Carter gets an alert that the villain Zodiac has been spotted and decides to take care of it herself.",
-    "poster_path": "https://image.tmdb.org/t/p/w500/4vFKKWPvCVDJTOWiwReBfpAMScP.jpg",
-    "backdrop_path": "https://image.tmdb.org/t/p/w1280/kv8KDbi2I4F4MNBbBMCR4LDqP6H.jpg",
-    "vote_average": 7.2,
-    "vote_count": 886,
-    "release_date": "2013-10-04",
-    "year": "2013",
-    "runtime": 142,
-    "genres": [
-      "Adventure",
-      "Action",
-      "Sci-Fi"
-    ],
-    "genre_ids": [
-      "adventure",
-      "action",
-      "sci-fi"
     ],
     "director": "Acclaimed Director",
     "cast": [
@@ -9701,34 +9417,6 @@ export const MOCK_MOVIES = [
     ],
     "genre_ids": [
       "music",
-      "documentary"
-    ],
-    "director": "Acclaimed Director",
-    "cast": [
-      "Lead Actor",
-      "Supporting Actor"
-    ],
-    "youtube_trailer_id": null,
-    "featured": false,
-    "trending": true
-  },
-  {
-    "id": 282420,
-    "title": "Disney: Through the Looking Glass",
-    "original_title": "Disney: a través del espejo",
-    "tagline": "",
-    "overview": "Tito del Amo, a passionate 72-year-old researcher, takes the final step to unravel the enigma about the alleged Spanish origin of the American cartoonist Walt Disney, making the same journey that his supposed mother made to give him up for adoption in Chicago. A journey that begins in Mojácar, Almería, Spain, and ends in New York. An exciting adventure, like Alicia's through the looking glass, to discover what is truth and what is not, with an unexpected result.",
-    "poster_path": "https://image.tmdb.org/t/p/w500/gwtZoVZd5JYgD93WH9VgfwhnSlc.jpg",
-    "backdrop_path": "https://image.tmdb.org/t/p/w1280/7SPLWEaa9U62WkCEy7lpSdPJMQy.jpg",
-    "vote_average": 10,
-    "vote_count": 1,
-    "release_date": "2010-01-11",
-    "year": "2010",
-    "runtime": 120,
-    "genres": [
-      "Documentary"
-    ],
-    "genre_ids": [
       "documentary"
     ],
     "director": "Acclaimed Director",
