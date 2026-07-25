@@ -8,22 +8,36 @@ const TMDB_BACKDROP_BASE = 'https://image.tmdb.org/t/p/w1280';
 const PRIMARY_TMDB_KEY = '4e44d9029b1270a757cddc766a1bcb63';
 const BACKUP_TMDB_KEY = '1cf50e6248dc270629e802686245c2c8';
 
-// Robust fetch helper with automatic key failover
+// Robust fetch helper with Vercel Cloud Server Proxy + direct fallback
 async function fetchTMDB(path, params = {}) {
+  // Strategy 1: Try Vercel Serverless Proxy (Bypasses all Mobile ISP / Jio / Airtel / CORS blocks)
+  try {
+    const proxyParams = new URLSearchParams({ endpoint: path, ...params });
+    const proxyUrl = `/api/tmdb?${proxyParams.toString()}`;
+    const proxyRes = await fetch(proxyUrl);
+    if (proxyRes.ok) {
+      const data = await proxyRes.json();
+      if (data && (data.results || data.id)) return data;
+    }
+  } catch (e) {
+    // Proxy not available locally or static dev
+  }
+
+  // Strategy 2: Direct Fetch with Primary Key
   const queryParams = new URLSearchParams({ ...params, api_key: PRIMARY_TMDB_KEY });
-  let url = `${TMDB_BASE_URL}${path}?${queryParams.toString()}`;
+  let directUrl = `${TMDB_BASE_URL}${path}?${queryParams.toString()}`;
 
   try {
-    let res = await fetch(url);
+    let res = await fetch(directUrl);
     if (res.ok) {
       const data = await res.json();
       if (data && (data.results || data.id)) return data;
     }
     
-    // Backup Key Retry
+    // Strategy 3: Direct Fetch with Backup Key
     queryParams.set('api_key', BACKUP_TMDB_KEY);
-    url = `${TMDB_BASE_URL}${path}?${queryParams.toString()}`;
-    res = await fetch(url);
+    directUrl = `${TMDB_BASE_URL}${path}?${queryParams.toString()}`;
+    res = await fetch(directUrl);
     if (res.ok) {
       return await res.json();
     }
