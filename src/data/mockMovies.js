@@ -13,6 +13,806 @@ export const GENRES = [
 
 export const MOCK_MOVIES = [
   {
+    "id": 1429974,
+    "title": "RRR",
+    "original_title": "రౌద్రం రణం రుధిరం",
+    "tagline": "India International Cinema",
+    "overview": "A fictional history of two legendary revolutionaries' journey away from home before they began fighting for their country in the 1920s.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/u0XUBNQWlOvrh0Gd97ARGpIkL0.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/i0Y0wP8H6SRgjr6QmuwbtQbS24D.jpg",
+    "vote_average": 7.7,
+    "vote_count": 1631,
+    "release_date": "2022-03-24",
+    "year": "2022",
+    "runtime": 130,
+    "genres": [
+      "India",
+      "Drama"
+    ],
+    "genre_ids": [
+      "india",
+      "drama"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "country": "India"
+  },
+  {
+    "id": 1437412,
+    "title": "K.G.F: Chapter 2",
+    "original_title": "ಕೆ.ಜಿ.ಎಫ್: Chapter 2",
+    "tagline": "India International Cinema",
+    "overview": "The blood-soaked land of Kolar Gold Fields (KGF) has a new overlord now - Rocky, whose name strikes fear in the heart of his foes. His allies look up to Rocky as their Savior, the government sees him as a threat to law and order; enemies are clamoring for revenge and conspiring for his downfall. Bloodier battles and darker days await as Rocky continues on his quest for unchallenged supremacy.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/khNVygolU0TxLIDWff5tQlAhZ23.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/nsV5Mfi9FAV4w8eDsdr7uqVswOk.jpg",
+    "vote_average": 7.4,
+    "vote_count": 211,
+    "release_date": "2022-04-14",
+    "year": "2022",
+    "runtime": 130,
+    "genres": [
+      "India",
+      "Drama"
+    ],
+    "genre_ids": [
+      "india",
+      "drama"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "country": "India"
+  },
+  {
+    "id": 1722906,
+    "title": "Jawan",
+    "original_title": "जवान",
+    "tagline": "India International Cinema",
+    "overview": "An emotional journey of a prison warden, driven by a personal vendetta while keeping up to a promise made years ago, recruits inmates to commit outrageous crimes that shed light on corruption and injustice, in an attempt to get even with his past,  and that leads him to an unexpected reunion.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/jFt1gS4BGHlK8xt76Y81Alp4dbt.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/5LtSjMNw6j3LkG29Oa4O0iY5U8.jpg",
+    "vote_average": 7,
+    "vote_count": 337,
+    "release_date": "2023-09-07",
+    "year": "2023",
+    "runtime": 130,
+    "genres": [
+      "India",
+      "Drama"
+    ],
+    "genre_ids": [
+      "india",
+      "drama"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "country": "India"
+  },
+  {
+    "id": 870453,
+    "title": "3 Idiots",
+    "original_title": "3 Idiots",
+    "tagline": "India International Cinema",
+    "overview": "Rascal. Joker. Dreamer. Genius... You've never met a college student quite like \"Rancho.\" From the moment he arrives at India's most prestigious university, Rancho's outlandish schemes turn the campus upside down—along with the lives of his two newfound best friends. Together, they make life miserable for \"Virus,\" the school’s uptight and heartless dean. But when Rancho catches the eye of the dean's daughter, Virus sets his sights on flunking out the \"3 idiots\" once and for all.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/66A9MqXOyVFCssoloscw79z8Tew.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/8gT3UKtglLVpu0YfccwbmXZ5Eis.jpg",
+    "vote_average": 8,
+    "vote_count": 2763,
+    "release_date": "2009-12-23",
+    "year": "2009",
+    "runtime": 130,
+    "genres": [
+      "India",
+      "Drama"
+    ],
+    "genre_ids": [
+      "india",
+      "drama"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "country": "India"
+  },
+  {
+    "id": 1200312,
+    "title": "Bāhubali 2: The Conclusion",
+    "original_title": "బాహుబలి 2: ది కన్ క్లూజన్",
+    "tagline": "India International Cinema",
+    "overview": "When Mahendra, the son of Bāhubali, learns about his heritage, he begins to look for answers. His story is juxtaposed with past events that unfolded in the Mahishmati Kingdom.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/21sC2assImQIYCEDA84Qh9d1RsK.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/whNjsTOUVg2lZLCKgGhnACnmV8E.jpg",
+    "vote_average": 7.5,
+    "vote_count": 868,
+    "release_date": "2017-04-27",
+    "year": "2017",
+    "runtime": 130,
+    "genres": [
+      "India",
+      "Drama"
+    ],
+    "genre_ids": [
+      "india",
+      "drama"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "country": "India"
+  },
+  {
+    "id": 1210814,
+    "title": "Dangal",
+    "original_title": "दंगल",
+    "tagline": "India International Cinema",
+    "overview": "Dangal is an extraordinary true story based on the life of Mahavir Singh and his two daughters, Geeta and Babita Phogat. The film traces the inspirational journey of a father who trains his daughters to become world class wrestlers.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/cJRPOLEexI7qp2DKtFfCh7YaaUG.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/l0fNAHLOFReQJsxCOmGWvJDnimn.jpg",
+    "vote_average": 7.9,
+    "vote_count": 1179,
+    "release_date": "2016-12-21",
+    "year": "2016",
+    "runtime": 130,
+    "genres": [
+      "India",
+      "Drama"
+    ],
+    "genre_ids": [
+      "india",
+      "drama"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "country": "India"
+  },
+  {
+    "id": 1708485,
+    "title": "Kantara",
+    "original_title": "ಕಾಂತಾರ",
+    "tagline": "India International Cinema",
+    "overview": "Shiva, a tribal vagabond lives with his mother in hamlet, stays away from the traditional Daivaradhane and Bhoota Kola legacy due to an unforgettable childhood incident. He is happy loafing around with his friends and doing petty jobs for his landlord. When Forest officer Murali enters the scene, it gives a fresh dimension to the man-vs-nature fight. Can Shiva save the forest from Murali? Or is Murali just a dummy bait cast by bigger fish?",
+    "poster_path": "https://image.tmdb.org/t/p/w500/jIsKmkxMzdCZ0Ux1GVSnu8m6Na6.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/kXElm7wt2kAXEVwJqW4cFhP43nW.jpg",
+    "vote_average": 7.1,
+    "vote_count": 144,
+    "release_date": "2022-09-30",
+    "year": "2022",
+    "runtime": 130,
+    "genres": [
+      "India",
+      "Drama"
+    ],
+    "genre_ids": [
+      "india",
+      "drama"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "country": "India"
+  },
+  {
+    "id": 1388858,
+    "title": "Tumbbad",
+    "original_title": "तुम्बाड",
+    "tagline": "India International Cinema",
+    "overview": "India, 1918. On the outskirts of Tumbbad, a cursed village where it always rains, Vinayak, along with his mother and his brother, care of a mysterious old woman who keeps the secret of an ancestral treasure that Vinayak gets obsessed with.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/vzjZAKozbDplHWcQXbXo0APKxst.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/l0YKBu3LaehIFzBNjseLjx7MbaN.jpg",
+    "vote_average": 7.6,
+    "vote_count": 339,
+    "release_date": "2018-10-12",
+    "year": "2018",
+    "runtime": 130,
+    "genres": [
+      "India",
+      "Drama"
+    ],
+    "genre_ids": [
+      "india",
+      "drama"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "country": "India"
+  },
+  {
+    "id": 1029352,
+    "title": "Sacred Games",
+    "original_title": "Sacred Games",
+    "tagline": "India International Cinema",
+    "overview": "A link in their pasts leads an honest cop to a fugitive gang boss, whose cryptic warning spurs the officer on a quest to save Mumbai from cataclysm.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/uEbNtFbK4At9WBDGap23lt1qO9n.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/qtac9X9lSLqZFbxS71347N8MiID.jpg",
+    "vote_average": 7.8,
+    "vote_count": 253,
+    "release_date": "2018-07-06",
+    "year": "2018",
+    "runtime": 130,
+    "genres": [
+      "India",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "india",
+      "series"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "country": "India"
+  },
+  {
+    "id": 1034105,
+    "title": "Mirzapur",
+    "original_title": "Mirzapur",
+    "tagline": "India International Cinema",
+    "overview": "The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an unworthy, power-hungry heir who will stop at nothing to inherit his father's legacy. An incident at a wedding procession forces him to cross paths with Ramakant Pandit, an upstanding lawyer, and his sons, Guddu and Bablu. It snowballs into a game of ambition, power and greed that threatens the fabric of this lawless city.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/1rxLUFVrtTo82OxhbDXJDiJVkwL.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/3dV7pWAdwIPKR2lMIACMfObXdgK.jpg",
+    "vote_average": 8,
+    "vote_count": 192,
+    "release_date": "2018-11-15",
+    "year": "2018",
+    "runtime": 130,
+    "genres": [
+      "India",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "india",
+      "series"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "country": "India"
+  },
+  {
+    "id": 1346243,
+    "title": "Parasite",
+    "original_title": "기생충",
+    "tagline": "South Korea International Cinema",
+    "overview": "All unemployed, Ki-taek's family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/hiKmpZMGZsrkA3cdce8a7Dpos1j.jpg",
+    "vote_average": 8.5,
+    "vote_count": 20920,
+    "release_date": "2019-05-30",
+    "year": "2019",
+    "runtime": 130,
+    "genres": [
+      "South Korea",
+      "Drama"
+    ],
+    "genre_ids": [
+      "south-korea",
+      "drama"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "country": "South Korea"
+  },
+  {
+    "id": 1246535,
+    "title": "Train to Busan",
+    "original_title": "부산행",
+    "tagline": "South Korea International Cinema",
+    "overview": "When a zombie virus pushes Korea into a state of emergency, those trapped on an express train to Busan must fight for their own survival.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/vNVFt6dtcqnI7hqa6LFBUibuFiw.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/brnfCYyz8EMbBrHgmh8sCwBi5i1.jpg",
+    "vote_average": 7.8,
+    "vote_count": 8506,
+    "release_date": "2016-07-20",
+    "year": "2016",
+    "runtime": 130,
+    "genres": [
+      "South Korea",
+      "Drama"
+    ],
+    "genre_ids": [
+      "south-korea",
+      "drama"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "country": "South Korea"
+  },
+  {
+    "id": 1049966,
+    "title": "All of Us Are Dead",
+    "original_title": "지금 우리 학교는",
+    "tagline": "South Korea International Cinema",
+    "overview": "A high school becomes ground zero for a zombie virus outbreak. Trapped students must fight their way out — or turn into one of the rabid infected.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/pTEFqAjLd5YTsMD6NSUxV6Dq7A6.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/8hp2CuGnw1iP5dLBVMAPUv23swx.jpg",
+    "vote_average": 8.3,
+    "vote_count": 4421,
+    "release_date": "2022-01-28",
+    "year": "2022",
+    "runtime": 130,
+    "genres": [
+      "South Korea",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "south-korea",
+      "series"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "country": "South Korea"
+  },
+  {
+    "id": 1044796,
+    "title": "Crash Landing on You",
+    "original_title": "사랑의 불시착",
+    "tagline": "South Korea International Cinema",
+    "overview": "A paragliding mishap drops a South Korean heiress in North Korea -- and into the life of an army officer, who decides he will help her hide.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/fgBNLPr6mC8pxuR79ENAJY4nBmj.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/3yEHM2HT2vrUtO93YzTJNgEfiZG.jpg",
+    "vote_average": 8.5,
+    "vote_count": 949,
+    "release_date": "2019-12-14",
+    "year": "2019",
+    "runtime": 130,
+    "genres": [
+      "South Korea",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "south-korea",
+      "series"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "country": "South Korea"
+  },
+  {
+    "id": 1086283,
+    "title": "The Glory",
+    "original_title": "더 글로리",
+    "tagline": "South Korea International Cinema",
+    "overview": "Years after surviving horrific abuse in high school, a woman puts an elaborate revenge scheme in motion to make the perpetrators pay for their crimes.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/uUM4LVlPgIrww07OoEKrGWlS1Ej.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/AjwoDj77HLlqcpwEGqsnvMXm5my.jpg",
+    "vote_average": 8.5,
+    "vote_count": 928,
+    "release_date": "2022-12-30",
+    "year": "2022",
+    "runtime": 130,
+    "genres": [
+      "South Korea",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "south-korea",
+      "series"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "country": "South Korea"
+  },
+  {
+    "id": 1067376,
+    "title": "Vincenzo",
+    "original_title": "빈센조",
+    "tagline": "South Korea International Cinema",
+    "overview": "During a visit to his motherland, a Korean-Italian mafia lawyer gives an unrivaled conglomerate a taste of its own medicinewith a side of justice.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/qbkSS1cTjT4DzIwD44bdhTuYgdT.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/sf7NCqyVUNoyjYuwW5oJke1T1lH.jpg",
+    "vote_average": 8.5,
+    "vote_count": 1083,
+    "release_date": "2021-02-20",
+    "year": "2021",
+    "runtime": 130,
+    "genres": [
+      "South Korea",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "south-korea",
+      "series"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "country": "South Korea"
+  },
+  {
+    "id": 850129,
+    "title": "Spirited Away",
+    "original_title": "千と千尋の神隠し",
+    "tagline": "Japan International Cinema",
+    "overview": "A young girl, Chihiro, becomes trapped in a strange new world of spirits. When her parents undergo a mysterious transformation, she must call upon the courage she never knew she had to free her family.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/dyJvKsNs2KP8qQnAXbRwDjblViy.jpg",
+    "vote_average": 8.5,
+    "vote_count": 18581,
+    "release_date": "2001-07-20",
+    "year": "2001",
+    "runtime": 130,
+    "genres": [
+      "Japan",
+      "Drama"
+    ],
+    "genre_ids": [
+      "japan",
+      "drama"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "country": "Japan"
+  },
+  {
+    "id": 1222058,
+    "title": "Your Name.",
+    "original_title": "君の名は。",
+    "tagline": "Japan International Cinema",
+    "overview": "High schoolers Mitsuha and Taki are complete strangers living separate lives. But one night, they suddenly switch places. Mitsuha wakes up in Taki’s body, and he in hers. This bizarre occurrence continues to happen randomly, and the two must adjust their lives around each other.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/mMtUybQ6hL24FXo0F3Z4j2KG7kZ.jpg",
+    "vote_average": 8.5,
+    "vote_count": 12720,
+    "release_date": "2016-07-01",
+    "year": "2016",
+    "runtime": 130,
+    "genres": [
+      "Japan",
+      "Drama"
+    ],
+    "genre_ids": [
+      "japan",
+      "drama"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "country": "Japan"
+  },
+  {
+    "id": 1790721,
+    "title": "Godzilla Minus One",
+    "original_title": "ゴジラ-1.0",
+    "tagline": "Japan International Cinema",
+    "overview": "In postwar Japan, Godzilla brings new devastation to an already scorched landscape. With no military intervention or government help in sight, the survivors must join together in the face of despair and fight back against an unrelenting horror.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/2E2WTX0TJEflAged6kzErwqX1kt.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/vlmiJOeDMbiyaJCAjFPtlkDcOEv.jpg",
+    "vote_average": 7.6,
+    "vote_count": 3262,
+    "release_date": "2023-11-03",
+    "year": "2023",
+    "runtime": 130,
+    "genres": [
+      "Japan",
+      "Drama"
+    ],
+    "genre_ids": [
+      "japan",
+      "drama"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "country": "Japan"
+  },
+  {
+    "id": 1035937,
+    "title": "Demon Slayer: Kimetsu no Yaiba",
+    "original_title": "鬼滅の刃",
+    "tagline": "Japan International Cinema",
+    "overview": "After a demon attack leaves his family slain and his sister cursed, Tanjiro embarks upon a perilous journey to find a cure and avenge those he's lost.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/xUfRZu2mi8jH6SzQEJGP6tjBuYj.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/3GQKYh6Trm8pxd2AypovoYQf4Ay.jpg",
+    "vote_average": 8.6,
+    "vote_count": 7363,
+    "release_date": "2019-04-06",
+    "year": "2019",
+    "runtime": 130,
+    "genres": [
+      "Japan",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "japan",
+      "series"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "country": "Japan"
+  },
+  {
+    "id": 1021446,
+    "title": "Money Heist",
+    "original_title": "La casa de papel",
+    "tagline": "Spain International Cinema",
+    "overview": "To carry out the biggest heist in history, a mysterious man called The Professor recruits a band of eight robbers who have a single characteristic: none of them has anything to lose. Five months of seclusion - memorizing every step, every detail, every probability - culminate in eleven days locked up in the National Coinage and Stamp Factory of Spain, surrounded by police forces and with dozens of hostages in their power, to find out whether their suicide wager will lead to everything or nothing.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/gFZriCkpJYsApPZEF3jhxL4yLzG.jpg",
+    "vote_average": 8.2,
+    "vote_count": 19561,
+    "release_date": "2017-05-02",
+    "year": "2017",
+    "runtime": 130,
+    "genres": [
+      "Spain",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "spain",
+      "series"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "country": "Spain"
+  },
+  {
+    "id": 1078904,
+    "title": "Dark Winds",
+    "original_title": "Dark Winds",
+    "tagline": "Germany International Cinema",
+    "overview": "This psychological thriller follows two Navajo police officers, Leaphorn and Chee, in the 1970s Southwest as their search for clues in a grisly double murder case forces them to challenge their own spiritual beliefs and come to terms with the trauma of their pasts.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/kDlrMN0P9ByrEH2GoRbBFeZHbcf.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/uNvpN37f9HbvsDBQFhHU5m2EnVo.jpg",
+    "vote_average": 7.5,
+    "vote_count": 199,
+    "release_date": "2022-06-12",
+    "year": "2022",
+    "runtime": 130,
+    "genres": [
+      "Germany",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "germany",
+      "series"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "country": "Germany"
+  },
+  {
+    "id": 1046677,
+    "title": "Lupin",
+    "original_title": "Lupin",
+    "tagline": "France International Cinema",
+    "overview": "Inspired by the adventures of Arsène Lupin, gentleman thief Assane Diop sets out to avenge his father for an injustice inflicted by a wealthy family.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/h6Z2oogE4mJk2uffdtIlLhb0EHx.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/aY7zv2pfk9H0QxaaL3PBjvalbKQ.jpg",
+    "vote_average": 7.7,
+    "vote_count": 2610,
+    "release_date": "2021-01-08",
+    "year": "2021",
+    "runtime": 130,
+    "genres": [
+      "France",
+      "TV Series"
+    ],
+    "genre_ids": [
+      "france",
+      "series"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": true,
+    "country": "France"
+  },
+  {
+    "id": 850194,
+    "title": "Amélie",
+    "original_title": "Le Fabuleux Destin d'Amélie Poulain",
+    "tagline": "France International Cinema",
+    "overview": "At a tiny Parisian café, the adorable yet painfully shy Amélie accidentally discovers a gift for helping others. Soon Amelie is spending her days as a matchmaker, guardian angel, and all-around do-gooder. But when she bumps into a handsome stranger, will she find the courage to become the star of her very own love story?",
+    "poster_path": "https://image.tmdb.org/t/p/w500/nSxDa3M9aMvGVLoItzWTepQ5h5d.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/6n53UI4mX9QMfe2S0Pgt8mGebY1.jpg",
+    "vote_average": 7.9,
+    "vote_count": 12498,
+    "release_date": "2001-04-25",
+    "year": "2001",
+    "runtime": 130,
+    "genres": [
+      "France",
+      "Drama"
+    ],
+    "genre_ids": [
+      "france",
+      "drama"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "country": "France"
+  },
+  {
+    "id": 850637,
+    "title": "Life Is Beautiful",
+    "original_title": "La vita è bella",
+    "tagline": "Italy International Cinema",
+    "overview": "A touching story of an Italian book seller of Jewish ancestry who lives in his own little fairy tale. His creative and happy life would come to an abrupt halt when his entire family is deported to a concentration camp during World War II. While locked up he tries to convince his son that the whole thing is just a game.",
+    "poster_path": "https://image.tmdb.org/t/p/w500/74hLDKjD5aGYOotO6esUVaeISa2.jpg",
+    "backdrop_path": "https://image.tmdb.org/t/p/w1280/6aNKD81RHR1DqUUa8kOZ1TBY1Lp.jpg",
+    "vote_average": 8.4,
+    "vote_count": 14093,
+    "release_date": "1997-12-20",
+    "year": "1997",
+    "runtime": 130,
+    "genres": [
+      "Italy",
+      "Drama"
+    ],
+    "genre_ids": [
+      "italy",
+      "drama"
+    ],
+    "director": "International Filmmaker",
+    "cast": [
+      "Lead Cast",
+      "Ensemble Cast"
+    ],
+    "youtube_trailer_id": null,
+    "featured": false,
+    "trending": true,
+    "is_series": false,
+    "country": "Italy"
+  },
+  {
     "id": 901396,
     "title": "Breaking Bad",
     "original_title": "Breaking Bad",
