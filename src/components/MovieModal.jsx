@@ -37,6 +37,11 @@ export default function MovieModal({
   // Convert 10-point TMDB rating to 5-star scale for display
   const starRating5 = (currentMovie.vote_average / 2).toFixed(1);
 
+  // Normalize user rating to 5-star scale
+  const normalizedUserRating = userRating 
+    ? (userRating > 5 ? Math.round(userRating / 2) : userRating)
+    : 0;
+
   const handleReviewSubmit = (e) => {
     e.preventDefault();
     if (!reviewInput.trim()) return;
@@ -47,17 +52,14 @@ export default function MovieModal({
   return (
     <div style={{
       position: 'fixed',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      background: 'rgba(9, 13, 22, 0.85)',
+      inset: 0,
+      background: 'rgba(9, 13, 22, 0.88)',
       backdropFilter: 'blur(20px)',
       zIndex: 9000,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: '1.5rem',
+      padding: '1rem',
       overflowY: 'auto'
     }}>
       <div style={{
@@ -68,31 +70,33 @@ export default function MovieModal({
         width: '100%',
         maxHeight: '90vh',
         overflowY: 'auto',
-        boxShadow: '0 25px 60px rgba(0, 0, 0, 0.8)',
+        boxShadow: '0 25px 60px rgba(0, 0, 0, 0.85)',
         position: 'relative',
         animation: 'scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
       }}>
-        {/* Close Button */}
+        {/* Sticky Close Button */}
         <button
           onClick={onClose}
           style={{
-            position: 'absolute',
+            position: 'sticky',
             top: '1rem',
             right: '1rem',
-            width: '40px',
-            height: '40px',
+            float: 'right',
+            marginRight: '1rem',
+            marginTop: '1rem',
+            width: '38px',
+            height: '38px',
             borderRadius: '50%',
-            background: 'rgba(9, 13, 22, 0.75)',
+            background: 'rgba(9, 13, 22, 0.85)',
             backdropFilter: 'blur(10px)',
-            border: '1px solid rgba(255, 255, 255, 0.2)',
+            border: '1px solid rgba(255, 255, 255, 0.25)',
             color: '#fff',
             fontSize: '1.2rem',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             cursor: 'pointer',
-            zIndex: 10,
-            transition: 'all 0.2s ease'
+            zIndex: 100
           }}
         >
           <i className="fa-solid fa-xmark" />
@@ -101,13 +105,14 @@ export default function MovieModal({
         {/* Backdrop Header */}
         <div style={{
           position: 'relative',
-          height: '320px',
+          height: '280px',
           backgroundImage: `linear-gradient(to top, #0d1322 0%, rgba(13, 19, 34, 0.3) 100%), url("${currentMovie.backdrop_path}")`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           display: 'flex',
           alignItems: 'flex-end',
-          padding: '2rem'
+          padding: '1.5rem',
+          clear: 'both'
         }}>
           {currentMovie.youtube_trailer_id && (
             <button
@@ -118,9 +123,10 @@ export default function MovieModal({
                 top: '50%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
-                padding: '0.85rem 1.75rem',
-                fontSize: '1rem',
-                boxShadow: '0 0 30px rgba(99, 102, 241, 0.6)'
+                padding: '0.75rem 1.5rem',
+                fontSize: '0.95rem',
+                boxShadow: '0 0 30px rgba(99, 102, 241, 0.6)',
+                whiteSpace: 'nowrap'
               }}
             >
               <i className={`fa-solid ${showTrailer ? 'fa-pause' : 'fa-play'}`} />
@@ -131,7 +137,7 @@ export default function MovieModal({
 
         {/* Embedded YouTube Player */}
         {showTrailer && currentMovie.youtube_trailer_id && (
-          <div style={{ padding: '1rem 2rem', background: '#000' }}>
+          <div style={{ padding: '1rem', background: '#000' }}>
             <div style={{ position: 'relative', paddingTop: '56.25%', width: '100%' }}>
               <iframe
                 src={`https://www.youtube.com/embed/${currentMovie.youtube_trailer_id}?autoplay=1`}
@@ -153,8 +159,8 @@ export default function MovieModal({
         )}
 
         {/* Modal Body */}
-        <div style={{ padding: '2rem' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: '2rem' }}>
+        <div style={{ padding: '1.5rem' }}>
+          <div className="modal-grid-container" style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '1.75rem' }}>
             {/* Left Column */}
             <div>
               <img
@@ -180,12 +186,12 @@ export default function MovieModal({
 
             {/* Right Column */}
             <div>
-              <h2 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#f8fafc', marginBottom: '0.3rem' }}>
+              <h2 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#f8fafc', marginBottom: '0.3rem' }}>
                 {currentMovie.title}
               </h2>
 
               {currentMovie.tagline && (
-                <p style={{ color: '#ec4899', fontStyle: 'italic', fontSize: '0.95rem', marginBottom: '1rem' }}>
+                <p style={{ color: '#ec4899', fontStyle: 'italic', fontSize: '0.9rem', marginBottom: '1rem' }}>
                   "{currentMovie.tagline}"
                 </p>
               )}
@@ -199,7 +205,7 @@ export default function MovieModal({
                     color: '#818cf8',
                     padding: '3px 10px',
                     borderRadius: '12px',
-                    fontSize: '0.8rem',
+                    fontSize: '0.78rem',
                     fontWeight: 600
                   }}>
                     {g}
@@ -211,37 +217,38 @@ export default function MovieModal({
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: '1.5rem',
+                gap: '1rem',
                 background: 'rgba(18, 24, 38, 0.8)',
-                padding: '0.85rem 1.25rem',
+                padding: '0.75rem 1rem',
                 borderRadius: '14px',
                 border: '1px solid rgba(255, 255, 255, 0.08)',
-                marginBottom: '1.5rem'
+                marginBottom: '1.25rem',
+                flexWrap: 'wrap'
               }}>
                 <div>
-                  <span style={{ fontSize: '0.75rem', color: '#64748b', display: 'block' }}>AUDIENCE RATING</span>
-                  <span style={{ fontSize: '1.1rem', fontWeight: 800, color: '#fbbf24' }}>
-                    <i className="fa-solid fa-star" /> {starRating5} <span style={{ fontSize: '0.8rem', color: '#64748b' }}>/ 5</span>
+                  <span style={{ fontSize: '0.7rem', color: '#64748b', display: 'block' }}>AUDIENCE RATING</span>
+                  <span style={{ fontSize: '1rem', fontWeight: 800, color: '#fbbf24' }}>
+                    <i className="fa-solid fa-star" /> {starRating5} <span style={{ fontSize: '0.75rem', color: '#64748b' }}>/ 5</span>
                   </span>
                 </div>
-                <div style={{ width: '1px', height: '28px', background: 'rgba(255, 255, 255, 0.1)' }} />
+                <div style={{ width: '1px', height: '24px', background: 'rgba(255, 255, 255, 0.1)' }} />
                 <div>
-                  <span style={{ fontSize: '0.75rem', color: '#64748b', display: 'block' }}>RELEASE YEAR</span>
-                  <span style={{ fontSize: '1rem', fontWeight: 700, color: '#f8fafc' }}>{currentMovie.year}</span>
+                  <span style={{ fontSize: '0.7rem', color: '#64748b', display: 'block' }}>RELEASE YEAR</span>
+                  <span style={{ fontSize: '0.95rem', fontWeight: 700, color: '#f8fafc' }}>{currentMovie.year}</span>
                 </div>
-                <div style={{ width: '1px', height: '28px', background: 'rgba(255, 255, 255, 0.1)' }} />
+                <div style={{ width: '1px', height: '24px', background: 'rgba(255, 255, 255, 0.1)' }} />
                 <div>
-                  <span style={{ fontSize: '0.75rem', color: '#64748b', display: 'block' }}>RUNTIME</span>
-                  <span style={{ fontSize: '1rem', fontWeight: 700, color: '#f8fafc' }}>{currentMovie.runtime} min</span>
+                  <span style={{ fontSize: '0.7rem', color: '#64748b', display: 'block' }}>RUNTIME</span>
+                  <span style={{ fontSize: '0.95rem', fontWeight: 700, color: '#f8fafc' }}>{currentMovie.runtime} min</span>
                 </div>
               </div>
 
               {/* Overview */}
-              <div style={{ marginBottom: '1.5rem' }}>
-                <h4 style={{ fontSize: '1rem', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '0.5rem' }}>
+              <div style={{ marginBottom: '1.25rem' }}>
+                <h4 style={{ fontSize: '0.9rem', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '0.4rem' }}>
                   Synopsis
                 </h4>
-                <p style={{ color: '#cbd5e1', lineHeight: 1.6, fontSize: '0.98rem' }}>
+                <p style={{ color: '#cbd5e1', lineHeight: 1.6, fontSize: '0.92rem' }}>
                   {currentMovie.overview}
                 </p>
               </div>
@@ -249,13 +256,13 @@ export default function MovieModal({
               {/* 5-STAR RATING PICKER */}
               <div style={{
                 background: 'rgba(18, 24, 38, 0.9)',
-                padding: '1.25rem',
+                padding: '1rem 1.25rem',
                 borderRadius: '16px',
                 border: '1px solid rgba(99, 102, 241, 0.2)',
-                marginBottom: '2rem'
+                marginBottom: '1.5rem'
               }}>
-                <h4 style={{ fontSize: '0.95rem', color: '#f8fafc', fontWeight: 700, marginBottom: '0.5rem' }}>
-                  Rate this Movie (5-Star Rating System)
+                <h4 style={{ fontSize: '0.9rem', color: '#f8fafc', fontWeight: 700, marginBottom: '0.4rem' }}>
+                  Rate this Movie (5-Star System)
                 </h4>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                   {[1, 2, 3, 4, 5].map((star) => (
@@ -267,9 +274,9 @@ export default function MovieModal({
                       style={{
                         background: 'none',
                         border: 'none',
-                        fontSize: '1.8rem',
+                        fontSize: '1.75rem',
                         cursor: 'pointer',
-                        color: star <= (hoverRating || userRating || 0) ? '#fbbf24' : 'rgba(255, 255, 255, 0.15)',
+                        color: star <= (hoverRating || normalizedUserRating || 0) ? '#fbbf24' : 'rgba(255, 255, 255, 0.15)',
                         transition: 'transform 0.15s ease'
                       }}
                       title={`${star} Star${star > 1 ? 's' : ''}`}
@@ -277,19 +284,19 @@ export default function MovieModal({
                       ★
                     </button>
                   ))}
-                  <span style={{ marginLeft: '12px', fontSize: '1rem', fontWeight: 800, color: '#fbbf24' }}>
-                    {userRating ? `${userRating} / 5 Stars` : 'Not Rated'}
+                  <span style={{ marginLeft: '10px', fontSize: '0.95rem', fontWeight: 800, color: '#fbbf24' }}>
+                    {normalizedUserRating ? `${normalizedUserRating} / 5 Stars` : 'Not Rated'}
                   </span>
                 </div>
               </div>
 
               {/* User Reviews */}
               <div>
-                <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#f8fafc', marginBottom: '1rem' }}>
+                <h4 style={{ fontSize: '1rem', fontWeight: 700, color: '#f8fafc', marginBottom: '0.75rem' }}>
                   User Reviews ({currentReviews.length})
                 </h4>
 
-                <form onSubmit={handleReviewSubmit} style={{ marginBottom: '1.5rem' }}>
+                <form onSubmit={handleReviewSubmit} style={{ marginBottom: '1.25rem' }}>
                   <textarea
                     rows="3"
                     placeholder="Write your review for this movie..."
@@ -302,13 +309,13 @@ export default function MovieModal({
                       borderRadius: '12px',
                       padding: '0.75rem 1rem',
                       color: '#f8fafc',
-                      fontSize: '0.9rem',
+                      fontSize: '0.88rem',
                       outline: 'none',
                       marginBottom: '0.5rem',
                       resize: 'vertical'
                     }}
                   />
-                  <button type="submit" className="btn btn-primary" style={{ padding: '0.5rem 1.25rem', fontSize: '0.85rem' }}>
+                  <button type="submit" className="btn btn-primary" style={{ padding: '0.45rem 1.1rem', fontSize: '0.82rem' }}>
                     Submit Review
                   </button>
                 </form>
@@ -318,14 +325,14 @@ export default function MovieModal({
                     background: 'rgba(18, 24, 38, 0.6)',
                     border: '1px solid rgba(255, 255, 255, 0.08)',
                     borderRadius: '12px',
-                    padding: '0.85rem 1rem',
-                    marginBottom: '0.75rem'
+                    padding: '0.75rem 0.9rem',
+                    marginBottom: '0.6rem'
                   }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.35rem' }}>
-                      <strong style={{ fontSize: '0.85rem', color: '#6366f1' }}>{rev.author}</strong>
-                      <span style={{ fontSize: '0.75rem', color: '#64748b' }}>{rev.date}</span>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.3rem' }}>
+                      <strong style={{ fontSize: '0.82rem', color: '#6366f1' }}>{rev.author}</strong>
+                      <span style={{ fontSize: '0.72rem', color: '#64748b' }}>{rev.date}</span>
                     </div>
-                    <p style={{ fontSize: '0.88rem', color: '#cbd5e1', margin: 0 }}>{rev.content}</p>
+                    <p style={{ fontSize: '0.85rem', color: '#cbd5e1', margin: 0 }}>{rev.content}</p>
                   </div>
                 ))}
               </div>
