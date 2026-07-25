@@ -40,7 +40,6 @@ export default function Navbar({
             <i className="fa-solid fa-film" />
           </div>
           <span className="brand-text">Movie<span>Mate</span></span>
-          <span className="brand-badge">v2</span>
         </div>
 
         {/* Search Bar Form */}
