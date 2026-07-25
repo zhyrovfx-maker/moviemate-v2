@@ -1,18 +1,18 @@
-/* MovieMate v2 Design System & Mobile Responsive Styles */
+/* MovieMate v2 — Sleek Crimson Red & Obsidian Black Theme */
 
 :root {
-  --bg-dark: #070a12;
-  --bg-card: rgba(15, 22, 38, 0.85);
-  --bg-card-hover: rgba(26, 36, 60, 0.95);
-  --bg-glass: rgba(12, 18, 32, 0.85);
+  --bg-dark: #07070a;
+  --bg-card: rgba(18, 12, 14, 0.88);
+  --bg-card-hover: rgba(32, 18, 22, 0.95);
+  --bg-glass: rgba(18, 10, 12, 0.88);
   
   --border-color: rgba(255, 255, 255, 0.1);
-  --border-focus: rgba(99, 102, 241, 0.6);
+  --border-focus: rgba(239, 68, 68, 0.6);
   
-  --primary-accent: #6366f1;
-  --primary-glow: rgba(99, 102, 241, 0.4);
-  --secondary-accent: #ec4899;
-  --tertiary-accent: #8b5cf6;
+  --primary-accent: #e50914;
+  --primary-glow: rgba(229, 9, 20, 0.45);
+  --secondary-accent: #b91c1c;
+  --tertiary-accent: #f87171;
   
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
@@ -20,7 +20,7 @@
   
   --star-gold: #fbbf24;
   --badge-watched: #10b981;
-  --badge-want: #3b82f6;
+  --badge-want: #ef4444;
 
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -30,8 +30,8 @@
   --radius-lg: 22px;
   --radius-full: 9999px;
 
-  --shadow-glow: 0 0 25px rgba(99, 102, 241, 0.35);
-  --shadow-card: 0 12px 35px -10px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 25px rgba(229, 9, 20, 0.45);
+  --shadow-card: 0 12px 35px -10px rgba(0, 0, 0, 0.8);
 }
 
 * {
@@ -48,8 +48,8 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   background-image: 
-    radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.12) 0%, transparent 45%),
-    radial-gradient(circle at 85% 85%, rgba(236, 72, 153, 0.08) 0%, transparent 45%);
+    radial-gradient(circle at 15% 15%, rgba(229, 9, 20, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 85% 85%, rgba(185, 28, 28, 0.12) 0%, transparent 45%);
   background-attachment: fixed;
 }
 
@@ -75,12 +75,12 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(229, 9, 20, 0.35);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(229, 9, 20, 0.6);
 }
 
 /* Layout */
@@ -103,11 +103,11 @@ a {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(9, 13, 22, 0.94);
+  background: rgba(10, 7, 8, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-color);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(229, 9, 20, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
 }
 
 .navbar-container {
@@ -134,7 +134,7 @@ a {
   width: 36px;
   height: 36px;
   border-radius: 12px;
-  background: linear-gradient(135deg, var(--primary-accent), var(--tertiary-accent));
+  background: linear-gradient(135deg, #e50914, #991b1b);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,16 +152,16 @@ a {
 }
 
 .brand-text span {
-  background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
+  background: linear-gradient(135deg, #e50914, #f87171);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .brand-badge {
   font-size: 0.65rem;
-  background: rgba(99, 102, 241, 0.25);
-  color: #818cf8;
-  border: 1px solid rgba(99, 102, 241, 0.4);
+  background: rgba(229, 9, 20, 0.25);
+  color: #f87171;
+  border: 1px solid rgba(229, 9, 20, 0.4);
   padding: 2px 6px;
   border-radius: 6px;
   font-weight: 700;
@@ -178,8 +178,8 @@ a {
   width: 100%;
   padding: 0.65rem 1rem 0.65rem 2.7rem;
   border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: var(--text-main);
   font-size: 0.88rem;
   outline: none;
@@ -187,9 +187,9 @@ a {
 }
 
 .search-input:focus {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: var(--primary-accent);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #e50914;
+  box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.25);
 }
 
 .search-icon {
@@ -197,7 +197,7 @@ a {
   left: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--text-dim);
+  color: #e50914;
   font-size: 0.9rem;
 }
 
@@ -228,15 +228,15 @@ a {
 
 .nav-link:hover {
   color: var(--text-main);
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(229, 9, 20, 0.15);
+  border-color: rgba(229, 9, 20, 0.3);
 }
 
 .nav-link.active {
   color: #ffffff;
-  background: linear-gradient(135deg, var(--primary-accent), var(--tertiary-accent));
+  background: linear-gradient(135deg, #e50914, #991b1b);
   border-color: transparent;
-  box-shadow: 0 4px 18px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 4px 18px rgba(229, 9, 20, 0.5);
 }
 
 .nav-link.icon-only {
@@ -248,7 +248,7 @@ a {
 }
 
 .badge-count {
-  background: var(--secondary-accent);
+  background: #e50914;
   color: #fff;
   font-size: 0.7rem;
   font-weight: 800;
@@ -276,7 +276,7 @@ a {
 }
 
 .genre-pill {
-  background: rgba(18, 24, 38, 0.75);
+  background: rgba(20, 14, 16, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: #94a3b8;
   padding: 0.5rem 1rem;
@@ -293,14 +293,14 @@ a {
 
 .genre-pill:hover {
   color: #fff;
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(229, 9, 20, 0.3);
 }
 
 .genre-pill.active {
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  background: linear-gradient(135deg, #e50914, #991b1b);
   border: none;
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
 }
 
 .movie-grid {
@@ -326,14 +326,14 @@ a {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary-accent), var(--tertiary-accent));
+  background: linear-gradient(135deg, #e50914, #991b1b);
   color: #ffffff;
-  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 4px 20px rgba(229, 9, 20, 0.5);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.6);
+  box-shadow: 0 8px 30px rgba(229, 9, 20, 0.7);
 }
 
 .btn-secondary {
@@ -342,9 +342,9 @@ a {
 }
 
 .btn-outline {
-  background: rgba(18, 24, 38, 0.8);
-  color: #818cf8;
-  border: 1px solid rgba(99, 102, 241, 0.4);
+  background: rgba(20, 14, 16, 0.85);
+  color: #f87171;
+  border: 1px solid rgba(229, 9, 20, 0.4);
 }
 
 /* MOBILE RESPONSIVE MEDIA QUERIES (<768px) */
