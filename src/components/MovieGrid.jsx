@@ -15,6 +15,19 @@ export default function MovieGrid({
 }) {
   const watchlistIds = new Set(watchlist.map(item => item.id));
 
+  // Safe Family-Friendly Content Guard (Strictly excludes 18+ adult movies & posters)
+  const isSafeContent = (movie) => {
+    if (!movie) return false;
+    if (movie.adult) return false;
+    const adultKeywords = ['adult', 'erotic', 'hentai', 'sex', 'nude', 'porn', 'strip', 'explicit', 'sensual', 'playboy'];
+    const title = (movie.title || '').toLowerCase();
+    const genres = (movie.genres || []).map(g => g.toLowerCase());
+    
+    if (genres.some(g => adultKeywords.some(k => g.includes(k)))) return false;
+    if (adultKeywords.some(k => title.includes(k))) return false;
+    return true;
+  };
+
   // Flexible Genre Matcher
   const isGenreMatch = (movieGenres, targetGenre) => {
     if (targetGenre === 'all') return true;
@@ -42,7 +55,7 @@ export default function MovieGrid({
     });
   };
 
-  const filteredMovies = movies.filter(m => isGenreMatch(m.genres, selectedGenre));
+  const filteredMovies = movies.filter(m => isSafeContent(m) && isGenreMatch(m.genres, selectedGenre));
 
   return (
     <section style={{ marginTop: '1.5rem' }}>

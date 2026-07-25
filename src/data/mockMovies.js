@@ -2010,36 +2010,6 @@ export const MOCK_MOVIES = [
     "trending": true
   },
   {
-    "id": 53244,
-    "title": "Sex Is Comedy",
-    "original_title": "Sex is Comedy",
-    "tagline": "",
-    "overview": "A director struggles with a difficult sex scene between a young actor and actress who can't stand one another. Aided by her loyal assistant, she is hell-bent on getting the scene right without compromise.",
-    "poster_path": "https://image.tmdb.org/t/p/w500/twhRxBqPbbbeUNZtvpyQl2PvNPF.jpg",
-    "backdrop_path": "https://image.tmdb.org/t/p/w1280/xHBalaJTvYxbZxIdI2moPMXQ52a.jpg",
-    "vote_average": 5.9,
-    "vote_count": 56,
-    "release_date": "2002-06-05",
-    "year": "2002",
-    "runtime": 129,
-    "genres": [
-      "Comedy",
-      "Drama"
-    ],
-    "genre_ids": [
-      "comedy",
-      "drama"
-    ],
-    "director": "Acclaimed Director",
-    "cast": [
-      "Lead Actor",
-      "Supporting Actor"
-    ],
-    "youtube_trailer_id": null,
-    "featured": false,
-    "trending": true
-  },
-  {
     "id": 12713,
     "title": "Comedy of Power",
     "original_title": "L'Ivresse du pouvoir",
@@ -2533,38 +2503,6 @@ export const MOCK_MOVIES = [
       "thriller",
       "action",
       "tv movie"
-    ],
-    "director": "Acclaimed Director",
-    "cast": [
-      "Lead Actor",
-      "Supporting Actor"
-    ],
-    "youtube_trailer_id": null,
-    "featured": false,
-    "trending": true
-  },
-  {
-    "id": 128136,
-    "title": "My Awkward Sexual Adventure",
-    "original_title": "My Awkward Sexual Adventure",
-    "tagline": "",
-    "overview": "A hyper-repressed and schlubby accountant (Jonas Chernick) strikes a deal with a worldly but disorganized stripper (Emily Hampshire): he'll help her with her crushing debt if she helps him become a better lover.",
-    "poster_path": "https://image.tmdb.org/t/p/w500/mLFXD0GrJhrRlvNpWbmecEiRADy.jpg",
-    "backdrop_path": "https://image.tmdb.org/t/p/w1280/2gR4hjE2atX7rwVm3pxtHKlTSx.jpg",
-    "vote_average": 6.7,
-    "vote_count": 366,
-    "release_date": "2012-09-11",
-    "year": "2012",
-    "runtime": 141,
-    "genres": [
-      "Comedy",
-      "Romance",
-      "Drama"
-    ],
-    "genre_ids": [
-      "comedy",
-      "romance",
-      "drama"
     ],
     "director": "Acclaimed Director",
     "cast": [
