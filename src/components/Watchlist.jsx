@@ -1,39 +1,13 @@
 import React, { useState } from 'react';
-import { storage } from '../services/storage';
 
 export default function Watchlist({ 
   watchlist, 
   onToggleWatchlist, 
-  onSelectMovie, 
-  onRefreshWatchlist 
+  onSelectMovie 
 }) {
   const [activeTab, setActiveTab] = useState('want'); // 'want' | 'watched'
-  const [importing, setImporting] = useState(false);
-  const [jsonText, setJsonText] = useState('');
 
   const filteredList = watchlist.filter(item => (item.status || 'want') === activeTab);
-
-  const handleExport = () => {
-    const dataStr = storage.exportData();
-    const blob = new Blob([dataStr], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `moviemate-backup-${new Date().toISOString().slice(0,10)}.json`;
-    link.click();
-  };
-
-  const handleImportSubmit = (e) => {
-    e.preventDefault();
-    if (storage.importData(jsonText)) {
-      alert('Data imported successfully!');
-      onRefreshWatchlist();
-      setImporting(false);
-      setJsonText('');
-    } else {
-      alert('Failed to parse backup JSON. Please check formatting.');
-    }
-  };
 
   return (
     <section style={{ padding: '1.5rem 0' }}>
@@ -44,71 +18,17 @@ export default function Watchlist({
         justifyContent: 'space-between',
         flexWrap: 'wrap',
         gap: '1rem',
-        marginBottom: '2rem'
+        marginBottom: '1.5rem'
       }}>
         <div>
           <h2 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#f8fafc', margin: 0 }}>
-            Your Watchlist & Collection
+            Your Watchlist & Saved Movies
           </h2>
-          <p style={{ color: '#94a3b8', fontSize: '0.9rem', margin: 0 }}>
-            Track movies you plan to see or have already watched.
+          <p style={{ color: '#94a3b8', fontSize: '0.9rem', margin: '0.2rem 0 0 0' }}>
+            Keep track of movies you plan to see or have already watched.
           </p>
         </div>
-
-        {/* Action Buttons: Export / Import */}
-        <div style={{ display: 'flex', gap: '0.75rem' }}>
-          <button 
-            onClick={handleExport}
-            className="btn btn-outline"
-            style={{ fontSize: '0.85rem', padding: '0.55rem 1rem' }}
-          >
-            <i className="fa-solid fa-download" /> Export JSON
-          </button>
-          <button 
-            onClick={() => setImporting(!importing)}
-            className="btn btn-outline"
-            style={{ fontSize: '0.85rem', padding: '0.55rem 1rem' }}
-          >
-            <i className="fa-solid fa-upload" /> Import JSON
-          </button>
-        </div>
       </div>
-
-      {/* Import Modal / Form */}
-      {importing && (
-        <div style={{
-          background: 'rgba(18, 24, 38, 0.95)',
-          border: '1px solid rgba(99, 102, 241, 0.3)',
-          borderRadius: '16px',
-          padding: '1.5rem',
-          marginBottom: '2rem'
-        }}>
-          <h4 style={{ color: '#f8fafc', marginBottom: '0.5rem' }}>Import MovieMate Backup</h4>
-          <form onSubmit={handleImportSubmit}>
-            <textarea
-              rows="4"
-              placeholder="Paste JSON content here..."
-              value={jsonText}
-              onChange={(e) => setJsonText(e.target.value)}
-              style={{
-                width: '100%',
-                background: '#090d16',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
-                borderRadius: '8px',
-                color: '#fff',
-                padding: '0.75rem',
-                fontSize: '0.85rem',
-                fontFamily: 'monospace',
-                marginBottom: '1rem'
-              }}
-            />
-            <div style={{ display: 'flex', gap: '0.5rem' }}>
-              <button type="submit" className="btn btn-primary" style={{ fontSize: '0.85rem' }}>Restore Data</button>
-              <button type="button" onClick={() => setImporting(false)} className="btn btn-outline" style={{ fontSize: '0.85rem' }}>Cancel</button>
-            </div>
-          </form>
-        </div>
-      )}
 
       {/* Tabs Switcher */}
       <div style={{
@@ -155,8 +75,8 @@ export default function Watchlist({
       {filteredList.length > 0 ? (
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-          gap: '1.5rem'
+          gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))',
+          gap: '1.25rem'
         }}>
           {filteredList.map(item => (
             <div 
@@ -173,13 +93,13 @@ export default function Watchlist({
                 src={item.poster_path} 
                 alt={item.title}
                 onClick={() => onSelectMovie(item)}
-                style={{ width: '100%', height: '260px', objectFit: 'cover', cursor: 'pointer' }} 
+                style={{ width: '100%', height: '240px', objectFit: 'cover', cursor: 'pointer' }} 
               />
               <div style={{ padding: '0.85rem' }}>
                 <h4 
                   onClick={() => onSelectMovie(item)}
                   style={{
-                    fontSize: '0.95rem',
+                    fontSize: '0.92rem',
                     fontWeight: 700,
                     color: '#f8fafc',
                     cursor: 'pointer',
@@ -239,9 +159,9 @@ export default function Watchlist({
           border: '1px dashed rgba(255, 255, 255, 0.1)'
         }}>
           <i className="fa-solid fa-bookmark" style={{ fontSize: '3rem', color: '#64748b', marginBottom: '1rem' }} />
-          <h3 style={{ fontSize: '1.3rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Your list is currently empty</h3>
+          <h3 style={{ fontSize: '1.3rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Your Watchlist is Empty</h3>
           <p style={{ color: '#94a3b8', fontSize: '0.9rem' }}>
-            Explore movies in the Discover tab and click the bookmark icon to save them here!
+            Explore movies in the Discover tab and click the bookmark button to save them here!
           </p>
         </div>
       )}
