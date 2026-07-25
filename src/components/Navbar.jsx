@@ -10,13 +10,31 @@ export default function Navbar({
   onOpenAuth, 
   onLogout 
 }) {
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      setCurrentView('discover');
+    }
+  };
+
+  const handleInputChange = (e) => {
+    const val = e.target.value;
+    setSearchQuery(val);
+    if (val.trim() && currentView !== 'discover') {
+      setCurrentView('discover');
+    }
+  };
+
   return (
     <header className="navbar">
       <div className="navbar-container">
         {/* Brand Logo */}
         <div 
           className="brand-logo" 
-          onClick={() => setCurrentView('discover')}
+          onClick={() => {
+            setSearchQuery('');
+            setCurrentView('discover');
+          }}
         >
           <div className="brand-icon">
             <i className="fa-solid fa-film" />
@@ -25,18 +43,39 @@ export default function Navbar({
           <span className="brand-badge">v2</span>
         </div>
 
-        {/* Search Bar */}
-        <div className="search-container">
-          <i className="fa-solid fa-magnifying-glass search-icon" />
+        {/* Search Bar Form */}
+        <form onSubmit={handleSearchSubmit} className="search-container">
+          <button 
+            type="submit" 
+            title="Search Movies"
+            style={{
+              position: 'absolute',
+              left: '0.6rem',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              background: 'none',
+              border: 'none',
+              color: '#818cf8',
+              cursor: 'pointer',
+              fontSize: '0.95rem',
+              padding: '4px',
+              zIndex: 2
+            }}
+          >
+            <i className="fa-solid fa-magnifying-glass" />
+          </button>
+
           <input
             type="text"
             className="search-input"
-            placeholder="Search TMDB movies, actors, directors..."
+            placeholder="Search 100+ live movies, actors..."
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            onChange={handleInputChange}
           />
+
           {searchQuery && (
             <button 
+              type="button"
               onClick={() => setSearchQuery('')}
               style={{
                 position: 'absolute',
@@ -47,13 +86,14 @@ export default function Navbar({
                 border: 'none',
                 color: '#94a3b8',
                 cursor: 'pointer',
-                fontSize: '1rem'
+                fontSize: '1rem',
+                zIndex: 2
               }}
             >
               <i className="fa-solid fa-xmark" />
             </button>
           )}
-        </div>
+        </form>
 
         {/* Navigation Action Buttons */}
         <div className="nav-actions">
