@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "rewrites": [
+    { "source": "/api/tmdb", "destination": "/api/tmdb.js" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
