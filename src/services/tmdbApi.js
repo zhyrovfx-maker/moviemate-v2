@@ -22,7 +22,7 @@ export const tmdbApi = {
   formatMovie: (movie) => {
     const poster = movie.poster_path
       ? (movie.poster_path.startsWith('http') ? movie.poster_path : `${TMDB_IMAGE_BASE}${movie.poster_path}`)
-      : 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600&auto=format&fit=crop&q=80';
+      : 'https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg';
 
     const backdrop = movie.backdrop_path
       ? (movie.backdrop_path.startsWith('http') ? movie.backdrop_path : `${TMDB_BACKDROP_BASE}${movie.backdrop_path}`)
@@ -66,50 +66,80 @@ export const tmdbApi = {
     };
   },
 
-  // Fetch Trending / Popular Movies from Live TMDB
+  // Fetch Comprehensive Live Movie Catalog (80+ TMDB movies across all categories & pages)
   getTrending: async () => {
     let apiKey = tmdbApi.getApiKey();
     try {
-      let res = await fetch(`${TMDB_BASE_URL}/trending/movie/week?api_key=${apiKey}`);
-      if (!res.ok) {
-        // Try backup key
-        res = await fetch(`${TMDB_BASE_URL}/trending/movie/week?api_key=${BACKUP_TMDB_KEY}`);
-      }
+      const endpoints = [
+        `${TMDB_BASE_URL}/trending/movie/week?api_key=${apiKey}&page=1`,
+        `${TMDB_BASE_URL}/trending/movie/week?api_key=${apiKey}&page=2`,
+        `${TMDB_BASE_URL}/movie/popular?api_key=${apiKey}&page=1`,
+        `${TMDB_BASE_URL}/movie/popular?api_key=${apiKey}&page=2`,
+        `${TMDB_BASE_URL}/movie/top_rated?api_key=${apiKey}&page=1`,
+        `${TMDB_BASE_URL}/movie/now_playing?api_key=${apiKey}&page=1`
+      ];
 
-      if (res.ok) {
-        const data = await res.json();
-        if (data.results && data.results.length > 0) {
-          return data.results.map((m, idx) => ({
-            ...tmdbApi.formatMovie(m),
-            featured: idx === 0
-          }));
+      const responses = await Promise.allSettled(endpoints.map(url => fetch(url).then(r => r.json())));
+      
+      const allMovies = [];
+      const seenIds = new Set();
+
+      responses.forEach(res => {
+        if (res.status === 'fulfilled' && res.value && res.value.results) {
+          res.value.results.forEach(m => {
+            if (m && m.id && m.poster_path && !seenIds.has(m.id)) {
+              seenIds.add(m.id);
+              allMovies.push(m);
+            }
+          });
         }
+      });
+
+      if (allMovies.length > 0) {
+        return allMovies.map((m, idx) => ({
+          ...tmdbApi.formatMovie(m),
+          featured: idx === 0
+        }));
       }
     } catch (err) {
-      console.warn('TMDB fetch network error, using fallback:', err);
+      console.warn('TMDB multi-fetch error, using fallback catalog:', err);
     }
+
     return MOCK_MOVIES.map(tmdbApi.formatMovie);
   },
 
-  // Search Movies by Query from Live TMDB
+  // Search Movies by Query across multiple pages from Live TMDB
   searchMovies: async (query) => {
     if (!query.trim()) return tmdbApi.getTrending();
     
     let apiKey = tmdbApi.getApiKey();
     try {
-      let res = await fetch(`${TMDB_BASE_URL}/search/movie?api_key=${apiKey}&query=${encodeURIComponent(query)}`);
-      if (!res.ok) {
-        res = await fetch(`${TMDB_BASE_URL}/search/movie?api_key=${BACKUP_TMDB_KEY}&query=${encodeURIComponent(query)}`);
-      }
+      const endpoints = [
+        `${TMDB_BASE_URL}/search/movie?api_key=${apiKey}&query=${encodeURIComponent(query)}&page=1`,
+        `${TMDB_BASE_URL}/search/movie?api_key=${apiKey}&query=${encodeURIComponent(query)}&page=2`
+      ];
 
-      if (res.ok) {
-        const data = await res.json();
-        if (data.results && data.results.length > 0) {
-          return data.results.map(tmdbApi.formatMovie);
+      const responses = await Promise.allSettled(endpoints.map(url => fetch(url).then(r => r.json())));
+      
+      const searchMoviesList = [];
+      const seenIds = new Set();
+
+      responses.forEach(res => {
+        if (res.status === 'fulfilled' && res.value && res.value.results) {
+          res.value.results.forEach(m => {
+            if (m && m.id && m.poster_path && !seenIds.has(m.id)) {
+              seenIds.add(m.id);
+              searchMoviesList.push(m);
+            }
+          });
         }
+      });
+
+      if (searchMoviesList.length > 0) {
+        return searchMoviesList.map(tmdbApi.formatMovie);
       }
     } catch (err) {
-      console.warn('TMDB search network error, using fallback:', err);
+      console.warn('TMDB multi-search error, using fallback:', err);
     }
 
     // Local Search fallback
