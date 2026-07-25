@@ -20,8 +20,12 @@ export default function MovieModal({
   useEffect(() => {
     let isMounted = true;
     async function loadDetails() {
+      if (movie.id >= 800000) {
+        setDetailedMovie(movie);
+        return;
+      }
       const details = await tmdbApi.getMovieDetails(movie.id);
-      if (isMounted) {
+      if (isMounted && details) {
         setDetailedMovie(details);
       }
     }
@@ -48,6 +52,11 @@ export default function MovieModal({
     onAddReview(movie.id, reviewInput.trim());
     setReviewInput('');
   };
+
+  // Generate trailer embed URL (Direct YouTube ID or fallback search player)
+  const trailerEmbedUrl = currentMovie.youtube_trailer_id
+    ? `https://www.youtube.com/embed/${currentMovie.youtube_trailer_id}?autoplay=1`
+    : `https://www.youtube.com/embed?listType=search&list=${encodeURIComponent(currentMovie.title + ' official trailer')}&autoplay=1`;
 
   return (
     <div style={{
@@ -114,33 +123,32 @@ export default function MovieModal({
           padding: '1.5rem',
           clear: 'both'
         }}>
-          {currentMovie.youtube_trailer_id && (
-            <button
-              onClick={() => setShowTrailer(!showTrailer)}
-              className="btn btn-primary"
-              style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                padding: '0.75rem 1.5rem',
-                fontSize: '0.95rem',
-                boxShadow: '0 0 30px rgba(99, 102, 241, 0.6)',
-                whiteSpace: 'nowrap'
-              }}
-            >
-              <i className={`fa-solid ${showTrailer ? 'fa-pause' : 'fa-play'}`} />
-              {showTrailer ? 'Close Trailer' : 'Watch Official Trailer'}
-            </button>
-          )}
+          {/* Always Available Watch Trailer Button */}
+          <button
+            onClick={() => setShowTrailer(!showTrailer)}
+            className="btn btn-primary"
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              padding: '0.75rem 1.5rem',
+              fontSize: '0.95rem',
+              boxShadow: '0 0 30px rgba(99, 102, 241, 0.6)',
+              whiteSpace: 'nowrap'
+            }}
+          >
+            <i className={`fa-solid ${showTrailer ? 'fa-xmark' : 'fa-play'}`} />
+            {showTrailer ? 'Close Trailer' : 'Watch Official Trailer'}
+          </button>
         </div>
 
         {/* Embedded YouTube Player */}
-        {showTrailer && currentMovie.youtube_trailer_id && (
+        {showTrailer && (
           <div style={{ padding: '1rem', background: '#000' }}>
             <div style={{ position: 'relative', paddingTop: '56.25%', width: '100%' }}>
               <iframe
-                src={`https://www.youtube.com/embed/${currentMovie.youtube_trailer_id}?autoplay=1`}
+                src={trailerEmbedUrl}
                 title={`${currentMovie.title} Trailer`}
                 style={{
                   position: 'absolute',
@@ -175,12 +183,21 @@ export default function MovieModal({
               />
 
               <button
+                onClick={() => setShowTrailer(!showTrailer)}
+                className="btn btn-primary"
+                style={{ width: '100%', justifyContent: 'center', marginBottom: '0.6rem' }}
+              >
+                <i className={`fa-solid ${showTrailer ? 'fa-xmark' : 'fa-play'}`} />
+                {showTrailer ? 'Close Trailer' : 'Watch Trailer'}
+              </button>
+
+              <button
                 onClick={() => onToggleWatchlist(currentMovie)}
-                className={`btn ${inWatchlist ? 'btn-secondary' : 'btn-primary'}`}
+                className={`btn ${inWatchlist ? 'btn-secondary' : 'btn-outline'}`}
                 style={{ width: '100%', justifyContent: 'center', marginBottom: '0.75rem' }}
               >
                 <i className={`fa-solid ${inWatchlist ? 'fa-check' : 'fa-bookmark'}`} />
-                {inWatchlist ? 'In Watchlist' : 'Add to Watchlist'}
+                {inWatchlist ? 'In Watchlist' : 'Add Watchlist'}
               </button>
             </div>
 
@@ -262,7 +279,7 @@ export default function MovieModal({
                 marginBottom: '1.5rem'
               }}>
                 <h4 style={{ fontSize: '0.9rem', color: '#f8fafc', fontWeight: 700, marginBottom: '0.4rem' }}>
-                  Rate this Movie (5-Star System)
+                  Rate this Title (5-Star System)
                 </h4>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                   {[1, 2, 3, 4, 5].map((star) => (
@@ -299,7 +316,7 @@ export default function MovieModal({
                 <form onSubmit={handleReviewSubmit} style={{ marginBottom: '1.25rem' }}>
                   <textarea
                     rows="3"
-                    placeholder="Write your review for this movie..."
+                    placeholder="Write your review for this title..."
                     value={reviewInput}
                     onChange={(e) => setReviewInput(e.target.value)}
                     style={{
