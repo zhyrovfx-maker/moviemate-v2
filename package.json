@@ -5,9 +5,9 @@
   "type": "module",
   "description": "MovieMate v2 — Open Source Movie Discovery, Recommendation & Watchlist Platform",
   "scripts": {
-    "dev": "vite --port 3001",
+    "dev": "vite --host --port 3001",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview --host"
   },
   "dependencies": {
     "react": "^18.3.1",
